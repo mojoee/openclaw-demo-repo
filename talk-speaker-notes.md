@@ -1,39 +1,33 @@
-# OpenClaw Talk - Speaker Notes
+# OpenClaw Talk - Speaker Notes v2
 
 ---
 
 ## Slide 1: Title
-
-**"OpenClaw: Your Terminal That Texts Back"**
-
 **Time:** 1 min
 
-**Key points:**
+**Talking points:**
 - Welcome everyone, thanks for coming
-- Quick intro: I'm Moritz, I work with AI agents, been tinkering with OpenClaw for a bit
-- Today: Show you what OpenClaw is, why it matters, live demos
+- Quick intro: "I'm Moritz, I work with AI agents, been tinkering with OpenClaw"
+- Today: What OpenClaw is, why it matters, live demos
 
 **Delivery:**
-- Keep it casual, friendly
-- Set expectation: this is a demo-heavy talk
-- Hit: "By the end, you'll have a running instance and your terminal will be able to text you back"
+- Keep it casual and friendly
+- Set expectation: "This is a demo-heavy talk — bring questions"
+- End intro with: "By the end, you'll have a running instance and your terminal will be able to text you back"
 
 ---
 
 ## Slide 2: The Problem
-
-**"What if your terminal could message back?"**
-
 **Time:** 2 min
 
-**Key points:**
+**Talking points:**
 - Hook: "How many of you have used an AI coding agent? Cursor, Claude, Copilot?"
 - "Great tools... but they're stuck in your terminal"
 - "Need to be at your keyboard, your machine"
-- "Problem: Access != Aware"
-- Show the gap: Phone has notification → can't act. Terminal has action → can't reach.
+- "Problem: Access != Awareness"
+- The pain: Phone has notification → can't act. Terminal has action → can't reach.
 
-**Demo / Story:**
+**Story:**
 - "I was on the train, got a GitHub notification, wanted to check. No laptop. Terminal is far away."
 - "What if I could just message my machine and have it do the thing?"
 
@@ -44,23 +38,19 @@
 ---
 
 ## Slide 3: What is OpenClaw?
-
-**"Self-hosted AI gateway"**
-
 **Time:** 3 min
 
-**Key points:**
+**Talking points:**
 - Definition: "OpenClaw is a gateway that connects chat apps to AI coding agents"
-- It's not a hosted service — it runs on YOUR machine
-- Multi-channel: "WhatsApp, Telegram, Discord, iMessage — pick your poison"
-- Agent-native: "Built for agents with tool use, sessions, memory"
+- "It's not a hosted service — it runs on YOUR machine"
+- "Multi-channel: WhatsApp, Telegram, Discord, iMessage — pick your poison"
+- "Agent-native: built for agents with tool use, sessions, memory"
 - Key phrase: "Your data, your rules"
 
 **Technical:**
 - Single Gateway process
 - Node 22+ required
 - Config at `~/.openclaw/openclaw.json`
-- Works with any agent (Pi, Claude, etc.)
 
 **Delivery:**
 - Walk through the diagram slowly
@@ -69,12 +59,9 @@
 ---
 
 ## Slide 4: Why Techies Should Care
-
-**4 Key Benefits**
-
 **Time:** 5 min
 
-**Key points:**
+**Talking points:**
 
 ### 1. Self-hosted = Control
 - "Your API keys never leave your machine"
@@ -91,7 +78,6 @@
 - "Different agents for different contexts"
 - "Work agent, personal agent, project-specific agents"
 - "Isolated sessions — data doesn't leak between contexts"
-- "Agent per project? Sure."
 
 ### 4. Mobile Dev Machine
 - "Your phone becomes a remote dev environment"
@@ -100,27 +86,25 @@
 - "From anywhere → your machine, your tools"
 
 **Delivery:**
-- This is the "why should I care" slide
 - Pause after each benefit, let it land
 - Personal anecdotes work: "I use it to check my servers from bed"
 
 ---
 
 ## Slide 5: Live Demo 1 - Research
-
-**"Show me the latest OpenClaw features"**
-
 **Time:** 4 min
 
-**Setup:**
-- Before slide: "Let's see this in action"
-- We'll do research live — no slides needed
+**What to say:**
+- "Let's see this in action"
+- "I'll do research live — not pre-recorded"
+- "This is a real conversation with my assistant"
 
-**What to do:**
-1. Say to chat: "Search for recent OpenClaw features"
-2. Show web_search result
-3. Click into one result with web_fetch
-4. Summarize what we found
+**Step by step:**
+1. Open Telegram (or your chat app)
+2. Type: "Search for the latest OpenClaw features"
+3. Show the web_search result
+4. Click into a result with web_fetch
+5. Summarize what we found
 
 **Key messages:**
 - "This is a real conversation - not pre-recorded"
@@ -129,33 +113,33 @@
 
 **Troubleshooting:**
 - Have backup: pre-fetched result ready if demo fails
+- Don't panic if slow — narrate what you're doing
 
 **Delivery:**
 - Make it feel casual: "Let me ask my assistant"
-- Narrate what you're doing: "I'm just sending a message..."
 - Point at the response: "Here's what came back"
 
 ---
 
 ## Slide 6: Live Demo 2 - Git Workflow
-
-**"Add a feature, commit, push"**
-
 **Time:** 5 min
 
-**Setup:**
-- Repo already exists: `/data/workspace/openclaw-demo-repo/`
-- Before this slide, make sure I'm connected
+**Setup before demo:**
+- Repo already exists and is linked
 
-**What to do:**
+**What to say:**
+- "Now let's do something more developer-focused"
+- "I'll write some code... from my phone"
+
+**Step by step:**
 1. Create a new file: `echo "New feature" > feature.txt`
 2. Git add: `git add .`
 3. Commit: `git commit -m "Add feature from chat"`
 4. Show the commit in git log
-5. (Skip actual push — no remote set up. Just show the commit locally.)
+5. Push (if remote is set up)
 
 **Key messages:**
-- "I just wrote code... from my phone"
+- "I just wrote code... via chat"
 - "That's my repo over there — it's real"
 - "You could do this from anywhere"
 
@@ -167,39 +151,37 @@
 ---
 
 ## Slide 7: Live Demo 3 - Cron Jobs
-
-**"This runs on a schedule"**
-
 **Time:** 3 min
 
 **Setup:**
-- Cron job already created: fires every hour, waiting
+- Cron job already created before the talk
 
-**What to do:**
-1. Explain: "I pre-set a cron job earlier — it fires every hour"
-2. Say trigger command: "Now"
+**What to say:**
+- "Cron isn't just for servers — it's for YOU"
+- "I pre-set a cron job earlier — it fires every hour"
+- "Let me trigger it now... ready?"
+
+**Step by step:**
+1. Explain what cron jobs can do
+2. Say the trigger command
 3. Show the system event fires in chat
 
 **Key messages:**
-- "Cron isn't just for servers — it's for YOU"
 - "Reminders, builds, checks — any automation"
 - "Schedule it once, forget about it"
 
 **Delivery:**
-- Make it a reveal: "I've actually had this ready since before the talk"
-- "Let me trigger it now... ready?"
+- Make it a reveal: "I've had this ready since before the talk"
+- "Let me trigger it now"
 - Show the message popping in
 
 ---
 
 ## Slide 8: Architecture
-
-**"How it works"**
-
 **Time:** 3 min
 
-**Key points:**
-- Diagram walk-through
+**Talking points:**
+- Walk through the diagram
 - Gateway = single source of truth
 - Channel plugins: each chat app
 - Sessions: isolated per sender
@@ -219,12 +201,9 @@
 ---
 
 ## Slide 9: Security
-
-**"Control from the start"**
-
 **Time:** 2 min
 
-**Key points:**
+**Talking points:**
 - Allowlists: "Only you can access"
 - Mention rules: "In groups, need to @-mention me"
 - Tokens: per-channel API keys
@@ -242,12 +221,9 @@
 ---
 
 ## Slide 10: Get Started
-
-**"One-liner install"**
-
 **Time:** 2 min
 
-**Key points:**
+**Talking points:**
 - Install: `npm install -g openclaw@latest`
 - Onboard: `openclaw onboard`
 - Start: `openclaw gateway`
@@ -264,13 +240,20 @@
 
 ---
 
-## Slide 11: Call to Action
+## Slide 11: Resources
+**Time:** 2 min
 
-**"Your terminal just learned to text back"**
+**Talking points:**
+- Point to key resources
+- Plugins ecosystem (clawhub.com)
+- Multi-channel support
 
+---
+
+## Slide 12: Call to Action
 **Time:** 1 min
 
-**Key points:**
+**Talking points:**
 - "Try it tonight"
 - "Message your machine"
 - "Make it work for YOU"
@@ -283,22 +266,38 @@
 
 ---
 
-## Slide 12: Q&A
+## Demo Scripts (Detailed)
 
-**"Questions?"**
+### Demo 1: Research
+```
+Command: "Search for recent OpenClaw releases on GitHub"
 
-**Time:** Open
+What happens:
+1. web_search fires → finds latest releases
+2. web_fetch pulls details from a result
+3. I summarize the findings
+```
 
-**Logistics:**
-- Mention: docs.openclaw.ai has everything
-- Discord community is active
-- Find me in the room or online
+### Demo 2: Git Workflow
+```
+Command: "Add a hello.txt file to the demo repo with 'Hello from OpenClaw' and commit it"
 
-**Potential questions to prep for:**
-- "Does it work on Windows?" → Yes, but CLI-focused, better on Mac/Linux
-- "What agents does it support?" → Pi, Claude, any via config
-- "Is it secure?" → Yes, local-only by default
-- "Can I use it for business?" → Yes, self-hosted = your compliance
+What happens:
+1. File created in /data/workspace/openclaw-demo-repo/
+2. git add .
+3. git commit -m "Add hello.txt via chat"
+4. git log shows the commit
+```
+
+### Demo 3: Cron Trigger
+```
+Command: "Fire the demo cron job now"
+
+What happens:
+1. cron run triggers the pre-set job
+2. systemEvent delivered to chat
+3. Message appears: "🔔 Demo cron fired!"
+```
 
 ---
 
@@ -316,6 +315,34 @@
 | 9     | 2 min | 28 min |
 | 10    | 2 min | 30 min |
 | 11    | 1 min | 31 min |
-| Q&A   | ∞    |       |
+| 12    | 1 min | 32 min |
 
-**Total target: 25-30 min**
+**Total target: 25-30 min** (Q&A adds more)
+
+---
+
+## Potential Q&A
+
+**Q: Does it work on Windows?**
+A: Yes, but CLI-focused. Best on Mac/Linux.
+
+**Q: What agents does it support?**
+A: Pi, Claude, any via config. Built-in support for MiniMax.
+
+**Q: Is it secure?**
+A: Yes, local-only by default. Token auth, allowlists.
+
+**Q: Can I use it for business?**
+A: Yes, self-hosted = your compliance.
+
+**Q: What if my API key is exposed?**
+A: It's on your machine — you control exposure. Unlike hosted services.
+
+---
+
+## Files in This Repo
+
+- `README.md` — intro
+- `presentation.html` — full slide deck (open in browser)
+- `talk-slides.md` — raw slides (markdown)
+- `talk-speaker-notes.md` — these notes
