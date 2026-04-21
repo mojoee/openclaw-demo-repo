@@ -301,7 +301,19 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 20: Call to Action
+## Slide 20: What's Next? (Outlook)
+
+### OpenClaw is growing fast
+
+**[nanoclaw.dev](https://nanoclaw.dev/)** — The hosted version (zero config)
+
+**OpenClaw (Self-hosted):** Full control, bring your own API keys, free & open source
+
+**NanoClaw (Hosted):** Zero config, pay per usage, managed by the team — coming soon
+
+---
+
+## Slide 21: Call to Action
 
 ### Try it now
 
@@ -313,7 +325,7 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 21: Q&A
+## Slide 22: Q&A
 
 ### Questions?
 
