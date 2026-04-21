@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw Talk — Deutsch</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --accent: #ff6b35;
+      --accent2: #00d4aa;
+      --text: #f0f0f5;
+      --muted: #888899;
+      --gradient: linear-gradient(135deg, #ff6b35 0%, #00d4aa 100%);
+    }
+    
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    .slide {
+      min-height: 100vh;
+      padding: 60px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid #222;
+    }
+    
+    .slide-number {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    
+    h1 {
+      font-size: 4em;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    
+    h2 {
+      font-size: 2.5em;
+      color: var(--accent);
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+    
+    h3 {
+      font-size: 1.5em;
+      color: var(--accent2);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    
+    p, li {
+      font-size: 1.4em;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    
+    ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    
+    li {
+      margin-bottom: 20px;
+      padding-left: 30px;
+      position: relative;
+    }
+    
+    li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    
+    .title-slide {
+      text-align: center;
+      background: radial-gradient(ellipse at center, #1a1a2e 0%, var(--bg) 70%);
+    }
+    
+    .title-slide h1 {
+      font-size: 5em;
+      margin-bottom: 30px;
+    }
+    
+    .title-slide .subtitle {
+      font-size: 1.8em;
+      color: var(--muted);
+      margin-bottom: 60px;
+    }
+    
+    .title-slide .meta {
+      font-size: 1.2em;
+      color: var(--accent2);
+    }
+    
+    .lobster {
+      font-size: 6em;
+      margin-bottom: 30px;
+    }
+    
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .accent { color: var(--accent); }
+    .accent2 { color: var(--accent2); }
+    .muted { color: var(--muted); }
+    
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 40px;
+    }
+    
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #222;
+    }
+    
+    .card h3 {
+      margin-bottom: 25px;
+    }
+    
+    code {
+      background: #1e1e2e;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 0.85em;
+      color: var(--accent2);
+    }
+    
+    pre {
+      background: #1e1e2e;
+      padding: 25px;
+      border-radius: 12px;
+      overflow-x: auto;
+      margin: 20px 0;
+      border-left: 4px solid var(--accent);
+    }
+    
+    pre code {
+      background: none;
+      padding: 0;
+      font-size: 1.1em;
+      color: var(--text);
+    }
+    
+    .emoji-row {
+      display: flex;
+      gap: 40px;
+      font-size: 2em;
+      margin: 40px 0;
+    }
+    
+    .demo-box {
+      background: linear-gradient(135deg, #1a1a2e 0%, #12121a 100%);
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      padding: 50px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    
+    .demo-box .emoji {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    
+    .demo-box h3 {
+      color: var(--text);
+      font-size: 1.8em;
+    }
+    
+    .demo-box p {
+      color: var(--muted);
+      font-size: 1.1em;
+    }
+    
+    .cta {
+      text-align: center;
+      background: radial-gradient(ellipse at center, #1a2a1a 0%, var(--bg) 70%);
+    }
+    
+    .cta-box {
+      display: inline-block;
+      background: var(--surface);
+      border: 2px solid var(--accent2);
+      border-radius: 20px;
+      padding: 50px 80px;
+    }
+    
+    .links {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    
+    .links a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 15px 30px;
+      border: 1px solid var(--accent2);
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .links a:hover {
+      background: var(--accent2);
+      color: var(--bg);
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+    }
+    
+    th, td {
+      padding: 20px;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+    
+    th {
+      color: var(--accent);
+      font-size: 1.2em;
+    }
+    
+    td {
+      font-size: 1.1em;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, rgba(0,212,170,0.1) 100%);
+      border-left: 4px solid var(--accent);
+      padding: 30px;
+      border-radius: 0 12px 12px 0;
+      margin: 30px 0;
+    }
+    
+    .mermaid {
+      background: var(--surface);
+      padding: 40px;
+      border-radius: 16px;
+      margin: 30px 0;
+    }
+    
+    @media (max-width: 768px) {
+      .slide { padding: 40px; }
+      h1 { font-size: 2.5em; }
+      h2 { font-size: 1.8em; }
+      p, li { font-size: 1.1em; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide title-slide">
+  <div class="lobster">🦞</div>
+  <h1>OpenClaw</h1>
+  <p class="subtitle" style="font-size: 1.4em; font-style: italic; color: var(--text); margin-bottom: 20px;">_"In Her, Samantha wasn't an app. She lived inside the OS — always there, everywhere, through any screen."_</p>
+  <p class="subtitle">Dein Terminal, das zurücktextet</p>
+  <p class="meta">22. April 2026 · Tech Talk</p>
+  <span class="slide-number">1 / 23</span>
+</div>
+
+<!-- Slide 1b: Her Filmausschnitt -->
+<div class="slide">
+  <h2>Die Vision: Her (2013)</h2>
+  <div style="text-align: center; margin: 20px 0;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 800px; margin: 0 auto; border-radius: 12px;">
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/dJTU48_yghs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <p class="muted" style="text-align: center; margin-top: 20px;">Der Film hat es vorhergesagt. OpenClaw baut es.</p>
+  <p style="text-align: center; margin-top: 10px;"><a href="https://www.youtube.com/watch?v=dJTU48_yghs" target="_blank" style="color: var(--accent2);">Auf YouTube öffnen ↗</a></p>
+  <span class="slide-number">1b / 23</span>
+</div>
+
+<!-- Slide 2: Das Problem -->
+<div class="slide">
+  <h2>Das Problem</h2>
+  <h3>Was, wenn dein Terminal dir antworten könnte?</h3>
+  <ul>
+    <li>AI coding agents are <span class="accent">leistungsstark</span>... but im Terminal gefangen</li>
+    <li>Du musst an der Tastatur sitzen, um sie zu nutzen</li>
+    <li>What if you could message your dev machine <span class="accent2">von überall aus</span>?</li>
+  </ul>
+  <div class="highlight-box">
+    <p><strong>Die Lücke:</strong> Zugriff ohne am Rechner zu sitzen</p>
+  </div>
+  <span class="slide-number">2 / 23</span>
+</div>
+
+<!-- Slide 3: What is OpenClaw -->
+<div class="slide">
+  <h2>Was ist OpenClaw?</h2>
+  <h3>Self-hosted KI-Gateway</h3>
+  <div class="two-col">
+    <div>
+      <ul>
+        <li><span class="accent">Lokal</span> — on your machine or server</li>
+        <li><span class="accent2">Multi-Channel</span> — WA, Telegram, Discord, iMessage</li>
+        <li><span class="accent">Agent-nativ</span> — built for coding agents</li>
+        <li><span class="accent2">Deine Daten, deine Regeln</span> — no vendor lock-in</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Architecture</h3>
+      <pre><code>Chat Apps → Gateway → Agent → Tools
+                  ↓
+              Sessions
+                  ↓
+             [Shell, Git,
+              Browser,
+              Cron...]</code></pre>
+    </div>
+  </div>
+  <span class="slide-number">3 / 23</span>
+</div>
+
+<!-- Slide 4: Warum Techies das cool finden -->
+<div class="slide">
+  <h2>Warum Techies das cool finden</h2>
+  <h3>4 wichtige Vorteile</h3>
+  <table>
+    <tr>
+      <th>1. Self-hosted = Kontrolle</th>
+      <td>Keine API-Key-Leaks, kein Vendor-Lock-in, Daten verlassen nie deine Maschine</td>
+    </tr>
+    <tr>
+      <th>2. Workflow-Integration</th>
+      <td>Scripts, CI/CD, Builds aus dem Chat auslösen — <code>/build</code> <code>/deploy</code></td>
+    </tr>
+    <tr>
+      <th>3. Multi-Agent-Routing</th>
+      <td>Different agents for work, personal, projects — isolated sessions</td>
+    </tr>
+    <tr>
+      <th>4. Mobiles Dev-System</th>
+      <td>Dein Phone wird zur Remote-Entwicklungsumgebung — von überall aus</td>
+    </tr>
+  </table>
+  <span class="slide-number">4 / 23</span>
+</div>
+
+
+
+<!-- Slide 5: Hi there 👀 -->
+<div class="slide">
+  <h2>Hi there 👀</h2>
+  <h3>Schnellstes wachsendes Open-Source-Projekt? 👀</h3>
+  <div style="text-align: center; margin: 30px 0;">
+    <img src="images/star-history.jpg" alt="Star History chart comparing OpenClaw to React, Vue, Linux, and Next.js" style="max-width: 90%; border-radius: 16px; border: 1px solid #333;">
+  </div>
+  <p class="muted" style="text-align: center; font-size: 0.9em; margin-top: 20px;">
+    OpenClaw ging von 0 auf 180K GitHub-Stars in Wochen. Das ist die vertikale Linie. 😄
+  </p>
+  <p style="text-align: center; margin-top: 30px;">
+    <span class="accent2">Deep-Dive von Paolo (Axiom):</span>
+    <a href="https://ppaolo.substack.com/p/openclaw-system-architecture-overview" style="color: var(--accent2);">ppaolo.substack.com</a>
+  </p>
+  <span class="slide-number">5 / 23</span>
+</div>
+
+
+
+<!-- Slide 6: Live Demo 1 -->
+<div class="slide">
+  <h2>Live Demo 1</h2>
+  <h3>Recherche — vom Chat aus</h3>
+  <div class="demo-box">
+    <div class="emoji">🔍</div>
+    <h3>"Show me the latest OpenClaw features"</h3>
+    <p>web_search → web_fetch → summarize — done</p>
+  </div>
+  <ul>
+    <li>Echtes Gespräch, nicht voraufgezeichnet</li>
+    <li>Kein Browser, kein Copy-Paste</li>
+    <li>Nachricht → Ergebnis</li>
+  </ul>
+  <<span class="slide-number">6 / 23</span></div>
+
+<!-- Slide 7: Live Demo 2 -->
+<div class="slide">
+  <h2>Live Demo 2</h2>
+  <h3>Git Workflow — von deinem Phone</h3>
+  <div class="demo-box">
+    <div class="emoji">📱 → 💻</div>
+    <h3>"Feature hinzufügen, committen, pushen"</h3>
+    <p>Write → git add → git commit → git push</p>
+  </div>
+  <ul>
+    <li>Code schreiben ohne Laptop</li>
+    <li>Echtes Repo, echter Commit</li>
+    <li>Perfekt für On-Call-Momente</li>
+  </ul>
+  <s<span class="slide-number">7 / 23</span>/div>
+
+<!-- Slide 8: Live Demo 3 -->
+<div class="slide">
+  <h2>Live Demo 3</h2>
+  <h3>Cron Jobs — geplante Automatisierung</h3>
+  <div class="demo-box">
+    <div class="emoji">⏰</div>
+    <h3>"This runs on a schedule"</h3>
+    <p>Erinnerungen · Builds · Checks · Jede Automatisierung</p>
+  </div>
+  <pre><code>schedule: every 1 hour
+→ systemEvent delivered to chat</code></pre>
+  <ul>
+    <li>Cron isn't just for servers — it's for <span class="accent">you</span></li>
+    <li>Einmal planen, vergessen</li>
+  </ul>
+  <sp<span class="slide-number">8 / 23</span>div>
+
+<!-- Slide 9: Systemarchitektur -->
+<div class="slide">
+  <h2>Systemarchitektur</h2>
+  <div style="text-align: center; margin-bottom: 30px;">
+    <img src="images/system-architecture.jpg" alt="OpenClaw Systemarchitektur Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 20px;">
+    <div>
+      <ul>
+        <li><span class="accent">Gateway</span> — single source of truth</li>
+        <li><span class="accent2">Channel-Plugins</span> — each chat app</li>
+        <li><span class="accent">Sessions</span> — isolated per sender</li>
+        <li><span class="accent2">Tools</span> — shell, git, browser, cron</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Data Flow</h3>
+      <pre><code>┌──────────────────┐
+│  Chat Apps       │
+│  WA · TG · Discord│
+└────────┬─────────┘
+         │
+    [Gateway]
+         │
+    ┌────┼────┐
+    ▼    ▼    ▼
+[Sessions][Tools][Channels]
+    │
+    ▼
+[Coding Agent]
+    │
+    ├── Shell
+    ├── Git
+    ├── Browser
+    └── Cron</code></pre>
+    </div>
+  </div>
+  <spa<span class="slide-number">9 / 23</span>iv>
+
+<!-- Slide 10: Erweiterbarkeit durch Plugins -->
+<div class="slide">
+  <h2>Erweiterbarkeit durch Plugins</h2>
+  <h3>Erweitern ohne Kerncode zu ändern</h3>
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="images/plugins-architecture.jpg" alt="Plugin Architecture Diagram" style="max-width: 90%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 20px;">
+    <div>
+      <ul>
+        <li><span class="accent">Channel-Plugins</span> — Teams, Matrix, Mattermost</li>
+        <li><span class="accent2">Memory-Plugins</span> — vector stores, knowledge graphs</li>
+        <li><span class="accent">Tool-Plugins</span> — custom capabilities beyond bash/browser</li>
+        <li><span class="accent2">Provider-Plugins</span> — custom LLM providers, self-hosted models</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>How it works</h3>
+      <ul style="font-size: 0.85em;">
+        <li>Plugins live in <code>extensions/</code></li>
+        <li>Discovery via <code>openclaw.extensions</code> in package.json</li>
+        <li>Validated against TypeBox schemas</li>
+        <li>Hot-loaded when configured</li>
+      </ul>
+    </div>
+  </div>
+  <span<span class="slide-number">10 / 23</span>v>
+
+<!-- Slide 11: Sicherheit -->
+<div class="slide">
+  <h2>Sicherheit</h2>
+  <h3>Kontrolle von Anfang an</h3>
+  <div class="two-col">
+    <div>
+      <ul>
+        <li><span class="accent">Allowlists</span> — Zugriff einschränken</li>
+        <li><span class="accent2">Mention-Rules</span> — Gruppenchat-Kontrolle</li>
+        <li><span class="accent">Tokens</span> — pro-Channel API-Keys</li>
+        <li><span class="accent2">Lokal</span> — deine Daten verlassen nie</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Config Example</h3>
+      <pre><code>{
+  channels: {
+    telegram: {
+      allowFrom: ["your-id"]
+    }
+  }
+}</code></pre>
+    </div>
+  </div>
+  <span<span class="slide-number">11 / 23</span>v>
+
+<!-- Slide 12: System-Prompt-Architektur -->
+<div class="slide">
+  <h2>System-Prompt-Architektur</h2>
+  <h3>Wie OpenClaw Kontext für das Modell aufbaut</h3>
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="images/system-prompt-arch.jpg" alt="System-Prompt-Architektur Diagram" style="max-width: 90%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 15px;">
+    <div>
+      <ul>
+        <li><span class="accent">Workspace-Dateien</span> — AGENTS.md, SOUL.md, TOOLS.md</li>
+        <li><span class="accent2">Dynamischer Kontext</span> — Session-Historie, Skills, Memory-Suche</li>
+        <li><span class="accent">Tool-Definitionen</span> — Built-in + Plugin-Tools</li>
+        <li><span class="accent2">Basis-System</span> — Pi-Agent-Kern-Anweisungen</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Final Prompt</h3>
+      <ul style="font-size: 0.85em;">
+        <li>System Prompt → all inputs above</li>
+        <li>Conversation History → session context</li>
+        <li>User Message → current input</li>
+        <li>→ <span class="accent">Model Invocation</span></li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide-number">12 / 23</span>
+</div>
+
+<!-- Slide 13: Meet Pi — The Agent Behind It All -->
+<div class="slide">
+  <h2>Meet Pi</h2>
+  <h3>The agent powering OpenClaw</h3>
+  <div class="two-col" style="margin-top: 30px;">
+    <div>
+      <ul>
+        <li><span class="accent">Built by Infellip</span> — the core AI runtime</li>
+        <li><span class="accent2">Agent-nativ design</span> — tools, memory, reasoning</li>
+        <li><span class="accent">Persistent context</span> — remembers your workspace</li>
+        <li><span class="accent2">Multi-model support</span> — Claude, GPT, local models</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Why it matters</h3>
+      <p style="font-size: 0.9em;">Pi isn't just a chat wrapper. It's designed from the ground up for <span class="accent">agentic workflows</span> — tool use, memory search, session management, and streaming responses.</p>
+      <p style="font-size: 0.85em; margin-top: 10px; color: var(--muted);">This is what makes OpenClaw different from a chatbot — it's an <span class="accent2">agent that acts</span>.</p>
+    </div>
+  </div>
+  <div class="highlight-box" style="margin-top: 20px;">
+    <p><strong>Fun fact:</strong> "Pi" stands for <em>Personal Intelligence</em> — your agent, your context, your tools.</p>
+  </div>
+  <span class="slide-number">22 / 23</span>
+</div>
+
+<!-- Slide 14: End-to-End Message Flow -->
+<div class="slide">
+  <h2>End-to-End Message Flow</h2>
+  <h3>Vom User-Message zum Response</h3>
+  <div style="text-align: center; margin: 15px 0;">
+    <img src="images/end2end-flow.jpg" alt="End-to-End Message Flow Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 15px;">
+    <div>
+      <ul>
+        <li><span class="accent">User</span> → Channel Adapter → Gateway</li>
+        <li><span class="accent2">Access Control</span> validates permissions</li>
+        <li><span class="accent">Session Manager</span> loads context</li>
+        <li><span class="accent2">Agent Runtime</span> builds prompt</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><span class="accent">Model API</span> processes request</li>
+        <li><span class="accent2">Tool Executor</span> runs tools if needed</li>
+        <li><span class="accent">Session</span> saves state</li>
+        <li><span class="accent2">Response</span> streams back to user</li>
+      </ul>
+    </div>
+  </div>
+  <span<span class="slide-number">13 / 23</span>v>
+
+<!-- Slide 15: Latenz-Aufschlüsselung -->
+<div class="slide">
+  <h2>Latenz-Aufschlüsselung</h2>
+  <h3>Wo die Zeit bleibt</h3>
+  <div class="two-col" style="margin-top: 30px;">
+    <div>
+      <table style="width: 100%; font-size: 0.95em;">
+        <tr><th>Schritt</th><th>Latenz</th></tr>
+        <tr><td><span class="accent">Access Control</span></td><td>&lt;10ms</td></tr>
+        <tr><td><span class="accent2">Session-Laden</span></td><td>&lt;50ms</td></tr>
+        <tr><td><span class="accent">Prompt-Zusammenbau</span></td><td>&lt;100ms</td></tr>
+        <tr><td><span class="accent2">Erstes Token (Modell)</span></td><td>200-500ms</td></tr>
+        <tr><td><span class="accent">Tool: Bash</span></td><td>&lt;100ms</td></tr>
+        <tr><td><span class="accent2">Tool: Browser</span></td><td>1-3s</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Fazit</h3>
+      <p style="font-size: 0.9em;">Die meisten Schritte sind <span class="accent">blitzschnell</span>. Der Flaschenhals ist immer <span class="accent2">Modell-Inferenz</span> and <span class="accent">Browser-Automatisierung</span>.</p>
+      <p style="font-size: 0.85em; margin-top: 15px; color: var(--muted);">Tip: Bash-Tools über Browser wenn möglich 🏃</p>
+    </div>
+  </div>
+  <span<span class="slide-number">14 / 23</span>v>
+
+<!-- Slide 16: Multi-Agent-Routing -->
+<div class="slide">
+  <h2>Multi-Agent-Routing</h2>
+  <h3>Verschiedene Channels → verschiedene Agenten</h3>
+  <div style="text-align: center; margin: 15px 0;">
+    <img src="images/multi-agent-routing.jpg" alt="Multi-Agent-Routing Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 15px;">
+    <div>
+      <ul>
+        <li><span class="accent">Channel</span> → Session Resolution</li>
+        <li><span class="accent2">WhatsApp DM</span> → main session (Claude Opus)</li>
+        <li><span class="accent">Discord Group</span> → discord bot (Claude Sonnet)</li>
+        <li><span class="accent2">Telegram DM</span> → support agent (GPT-4o)</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>Jeder Agent hat seinen eigenen Workspace</li>
+        <li>Eigene <code>AGENTS.md</code>, <code>SOUL.md</code>, skills</li>
+        <li>Isolierte Sessions pro Sender</li>
+        <li>Routing nach Channel/Gruppe/User</li>
+      </ul>
+    </div>
+  </div>
+  <span<span class="slide-number">15 / 23</span>v>
+
+<!-- Slide 17: Loslegen -->
+<div class="slide">
+  <h2>Loslegen</h2>
+  <h3>One-Liner-Installation</h3>
+  <pre><code>npm install -g openclaw@latest
+openclaw onboard
+openclaw gateway</code></pre>
+  <div class="emoji-row">
+    <span>📦</span>
+    <span>⚙️</span>
+    <span>🚀</span>
+  </div>
+  <p class="muted">Fünf Minuten. Wirklich.</p>
+  <span<span class="slide-number">16 / 23</span>v>
+
+<!-- Slide 18: Was kostet das? -->
+<div class="slide">
+  <h2>Was kostet das?</h2>
+  <h3>Dein eigenes KI-Gateway betreiben</h3>
+  <table>
+    <tr>
+      <th>Komponente</th>
+      <th>Kosten</th>
+    </tr>
+    <tr>
+      <td><span class="accent">OpenClaw</span></td>
+      <td>Kostenlos (self-hosted)</td>
+    </tr>
+    <tr>
+      <td><span class="accent2">Infrastruktur</span></td>
+      <td>~€15/mo (Railway hobby)</td>
+    </tr>
+    <tr>
+      <td><span class="accent">Dein Rechner</span></td>
+      <td>Schon bezahlt</td>
+    </tr>
+  </table>
+  <div class="highlight-box">
+    <p>OpenClaw selbst = kostenlos · KI-Modelle = eigenen API-Key mitbringen · Hosting = günstig ($5-20/mo) or use your existing machine</p>
+  </div>
+  <span<span class="slide-number">17 / 23</span>v>
+
+<!-- Slide 19: Zustandsverwaltung -->
+<div class="slide">
+  <h2>Zustandsverwaltung</h2>
+  <h3>Wie OpenClaw persistente Daten speichert</h3>
+  <div style="text-align: center; margin: 15px 0;">
+    <img src="images/state-management.jpg" alt="Zustandsverwaltung Diagram" style="max-width: 90%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 15px;">
+    <div>
+      <ul>
+        <li><span class="accent">Workspace</span> — AGENTS.md, SOUL.md, TOOLS.md, skills/</li>
+        <li><span class="accent2">Config</span> — ~/.openclaw/openclaw.json</li>
+        <li><span class="accent">Environment Variables</span> — override config</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><span class="accent2">Credentials</span> — ~/.openclaw/credentials/</li>
+        <li><span class="accent">Sessions</span> — ~/.openclaw/sessions/</li>
+        <li><span class="accent2">Memory</span> — ~/.openclaw/memory/*.db</li>
+      </ul>
+    </div>
+  </div>
+  <span<span class="slide-number">18 / 23</span>v>
+
+<!-- Slide 20: Ressourcen -->
+<div class="slide">
+  <h2>Ressourcen</h2>
+  <div class="two-col">
+    <div class="card">
+      <h3>Dokumentation</h3>
+      <ul>
+        <li>Docs: <span class="accent2">docs.openclaw.ai</span></li>
+        <li>GitHub: <span class="accent2">github.com/openclaw/openclaw</span></li>
+        <li>Discord: <span class="accent2">discord.gg/clawd</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Plugins & Mehr</h3>
+      <ul>
+        <li>Skills: <span class="accent">clawhub.com</span></li>
+        <li>WhatsApp, Signal, iMessage</li>
+        <li>Slack, Google Chat, Mattermost</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top: 20px;">
+    <h3>Deep-dive by Paolo (Axiom)</h3>
+    <ul>
+      <li><a href="https://ppaolo.substack.com/p/openclaw-system-architecture-overview" style="color: var(--accent2);">OpenClaw Architecture Explained</a></li>
+    </ul>
+  </div>
+  <span<span class="slide-number">19 / 23</span>v>
+
+<!-- Slide 21: What's Next (Outlook) -->
+<div class="slide">
+  <h2>Was kommt als Nächstes?</h2>
+  <h3>OpenClaw wächst schnell</h3>
+  <div style="text-align: center; margin: 20px 0;">
+    <div style="background: var(--surface); border-radius: 16px; padding: 30px; border: 1px solid #333; display: inline-block;">
+      <h3 style="color: var(--accent2); font-size: 1.8em; margin-bottom: 10px;">nanoclaw.dev</h3>
+      <p style="color: var(--muted); margin-bottom: 15px;">Die gehostete Version — your AI gateway, zero config</p>
+      <a href="https://nanoclaw.dev/" target="_blank" style="color: var(--accent); font-size: 1.2em;">→ Try NanoClaw</a>
+    </div>
+  </div>
+  <div class="two-col" style="margin-top: 30px;">
+    <div>
+      <h3 style="color: var(--accent); margin-bottom: 15px;">OpenClaw (Self-hosted)</h3>
+      <ul>
+        <li>Volle Kontrolle</li>
+        <li>Bring your own API keys</li>
+        <li>Auf eigener Infrastruktur betreiben</li>
+        <li>Kostenlos & Open Source</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color: var(--accent2); margin-bottom: 15px;">NanoClaw (Hosted)</h3>
+      <ul>
+        <li>Zero Config</li>
+        <li>Pay per Usage</li>
+        <li>Vom Team verwaltet</li>
+        <li>Coming Soon at nanoclaw.dev</li>
+      </ul>
+    </div>
+  </div>
+  <span<span class="slide-number">20 / 23</span>v>
+
+<!-- Slide 22: CTA -->
+<div class="slide cta">
+  <div class="cta-box">
+    <h2 style="margin-bottom: 30px;">Dein Terminal hat gerade gelernt zurückzuschreiben.</h2>
+    <p style="font-size: 1.5em; margin-bottom: 30px;">Probier's heute Nacht.</p>
+    <div class="links">
+      <a href="https://docs.openclaw.ai">Docs</a>
+      <a href="https://github.com/openclaw/openclaw">GitHub</a>
+      <a href="https://discord.gg/clawd">Discord</a>
+    </div>
+  </div>
+  <p style="margin-top: 40px;" class="muted">Live-Demo powered by Clawdia 🦞</p>
+  <span<span class="slide-number">21 / 23</span>v>
+
+<!-- Slide 23: Q&A -->
+<div class="slide">
+  <h2>Fragen?</h2>
+  <div style="text-align: center; margin-top: 50px;">
+    <div style="display: inline-block; background: var(--surface); border-radius: 16px; padding: 40px; border: 1px solid #333;">
+      <img src="images/linkedin-qr.png" alt="LinkedIn QR Code" style="width: 200px; border-radius: 8px;">
+      <p style="margin-top: 20px; color: var(--accent2);">Let's connect!</p>
+      <p style="color: var(--muted); font-size: 0.9em;">linkedin.com/in/moritzsontheimer</p>
+    </div>
+  </div>
+  <p style="text-align: center; margin-top: 60px;" class="muted">🦞</p>
+  <span<span class="slide-number">22 / 23</span>v>
+
+</body>
+</html>
