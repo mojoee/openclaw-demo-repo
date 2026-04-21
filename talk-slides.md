@@ -59,6 +59,18 @@ Chat apps → OpenClaw Gateway → AI Agent → Your tools
 
 2. **Workflow Integration**
    - Trigger scripts, automation, CI/CD from chat
+## Slide 5: The Buzz
+
+### Fastest growing open-source project? 👀
+
+![Star History](images/star-history.jpg)
+
+OpenClaw went from 0 to 180K GitHub stars in weeks. That's the vertical line. 😄
+
+**Deep-dive by Paolo (Axiom):** https://ppaolo.substack.com/p/openclaw-system-architecture-overview
+
+---
+
    - `/build`, `/deploy`, `/test` — done
 
 3. **Multi-agent Routing**
@@ -71,7 +83,7 @@ Chat apps → OpenClaw Gateway → AI Agent → Your tools
 
 ---
 
-## Slide 5: Live Demo 1 - Research
+## Slide 6: Live Demo 1 - Research
 
 ### "Show me the latest OpenClaw features"
 
@@ -84,7 +96,7 @@ web_fetch: First result → summarize
 
 ---
 
-## Slide 6: Live Demo 2 - Git Workflow
+## Slide 7: Live Demo 2 - Git Workflow
 
 ### "Add a feature, commit, push — from chat"
 
@@ -97,7 +109,7 @@ web_fetch: First result → summarize
 
 ---
 
-## Slide 7: Live Demo 3 - Cron Jobs
+## Slide 8: Live Demo 3 - Cron Jobs
 
 ### "This runs on a schedule"
 
@@ -116,7 +128,7 @@ schedule: every 1 hour
 
 ---
 
-## Slide 8: System Architecture
+## Slide 9: System Architecture
 
 ![System Architecture](images/system-architecture.jpg)
 
@@ -127,7 +139,7 @@ schedule: every 1 hour
 
 ---
 
-## Slide 9: Extensibility through Plugins
+## Slide 10: Extensibility through Plugins
 
 ![Plugin Architecture](images/plugins-architecture.jpg)
 
@@ -142,7 +154,7 @@ Plugin discovery via `openclaw.extensions` in package.json, validated against Ty
 
 ---
 
-## Slide 10: Security
+## Slide 11: Security
 
 ### Control from the start
 
@@ -163,7 +175,7 @@ Plugin discovery via `openclaw.extensions` in package.json, validated against Ty
 
 ---
 
-## Slide 11: System Prompt Architecture
+## Slide 12: System Prompt Architecture
 
 ![System Prompt Architecture](images/system-prompt-arch.jpg)
 
@@ -178,7 +190,7 @@ Final Prompt = System Prompt + Conversation History + User Message → Model Inv
 
 ---
 
-## Slide 12: End-to-End Message Flow
+## Slide 13: End-to-End Message Flow
 
 ![End-to-End Flow](images/end2end-flow.jpg)
 
@@ -195,7 +207,7 @@ From user message to response:
 
 ---
 
-## Slide 13: Latency Breakdown
+## Slide 14: Latency Breakdown
 
 ### Where the time goes
 
@@ -212,7 +224,7 @@ From user message to response:
 
 ---
 
-## Slide 14: Multi-Agent Routing
+## Slide 15: Multi-Agent Routing
 
 ![Multi-Agent Routing](images/multi-agent-routing.jpg)
 
@@ -226,7 +238,7 @@ Each agent has its own workspace (AGENTS.md, SOUL.md, skills), isolated sessions
 
 ---
 
-## Slide 15: Get Started
+## Slide 16: Get Started
 
 ### One-liner install
 
@@ -244,7 +256,7 @@ openclaw gateway
 
 ---
 
-## Slide 16: What it Costs
+## Slide 17: What it Costs
 
 ### Running your own AI gateway
 
@@ -257,18 +269,6 @@ openclaw gateway
 - OpenClaw itself = free
 - AI models = bring your own API key
 - Hosting = cheap ($5-20/mo) or use your existing machine
-
----
-
-## Slide 17: The Buzz
-
-### Fastest growing open-source project? 👀
-
-![Star History](images/star-history.jpg)
-
-OpenClaw went from 0 to 180K GitHub stars in weeks. That's the vertical line. 😄
-
-**Deep-dive by Paolo (Axiom):** https://ppaolo.substack.com/p/openclaw-system-architecture-overview
 
 ---
 
