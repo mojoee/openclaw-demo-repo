@@ -169,7 +169,28 @@ Pause for effect. Let that sink in.
 
 ---
 
-## Slide 13: End-to-End Message Flow (~2 min)
+## Slide 13: Meet Pi (~1-2 min)
+
+**Say:**
+> "Now let me introduce you to the agent behind all of this — Pi."
+
+**Key points:**
+- **Built by Infellip** — the core AI runtime that powers OpenClaw
+- **Agent-native design** — tools, memory, reasoning — not a chatbot wrapper
+- **Persistent context** — remembers your workspace across sessions
+- **Multi-model support** — Claude, GPT, local models, any OpenAI-compatible API
+
+**The mic drop line:**
+> "This is what makes OpenClaw different from a chatbot. It's not responding to messages — it's an agent that acts."
+
+**Fun fact to share:**
+> "Pi stands for Personal Intelligence. Your agent, your context, your tools."
+
+**Transition:** "Let's trace how a message actually flows through this system..."
+
+---
+
+## Slide 14: End-to-End Message Flow (~2 min)
 
 **Say:**
 > "Let's trace a message all the way through. This is the full flow — from you hitting send to getting a response."
@@ -187,7 +208,7 @@ Pause for effect. Let that sink in.
 
 ---
 
-## Slide 14: Latency Breakdown (~1 min)
+## Slide 15: Latency Breakdown (~1 min)
 
 **Quick table walkthrough:**
 
@@ -204,7 +225,7 @@ Pause for effect. Let that sink in.
 
 ---
 
-## Slide 15: Multi-Agent Routing (~1-2 min)
+## Slide 16: Multi-Agent Routing (~1-2 min)
 
 **Say:**
 > "One of the most powerful features: multi-agent routing. Different channels can go to different agents with different configs."
@@ -218,7 +239,7 @@ Pause for effect. Let that sink in.
 
 ---
 
-## Slide 16: Get Started (~1 min)
+## Slide 17: Get Started (~1 min)
 
 **Say:**
 > "Ready to try it? Three commands. Five minutes."
@@ -233,7 +254,7 @@ openclaw gateway
 
 ---
 
-## Slide 17: What it Costs (~1 min)
+## Slide 18: What it Costs (~1 min)
 
 **Say:**
 > "Let's talk money. What's this going to cost you?"
@@ -248,7 +269,7 @@ openclaw gateway
 
 ---
 
-## Slide 18: State Management (~1-2 min)
+## Slide 19: State Management (~1-2 min)
 
 **Say:**
 > "Quick look at how OpenClaw manages state. Everything lives in ~/.openclaw/"
@@ -264,7 +285,7 @@ openclaw gateway
 
 ---
 
-## Slide 19: Resources (~1 min)
+## Slide 20: Resources (~1 min)
 
 **Point through:**
 - **Docs:** docs.openclaw.ai
@@ -276,7 +297,7 @@ openclaw gateway
 
 ---
 
-## Slide 20: What's Next? (~1 min)
+## Slide 21: What's Next? (~1 min)
 
 **Say:**
 > "OpenClaw is growing fast — and there's more coming."
@@ -289,7 +310,7 @@ openclaw gateway
 
 ---
 
-## Slide 21: Call to Action (~30 sec)
+## Slide 22: Call to Action (~30 sec)
 
 **Say:**
 > "Your terminal just learned to text back. Try it tonight."
@@ -303,7 +324,7 @@ openclaw gateway
 
 ---
 
-## Slide 22: Q&A
+## Slide 23: Q&A
 
 **Have your QR code ready, LinkedIn open.**
 
