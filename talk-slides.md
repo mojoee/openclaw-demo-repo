@@ -190,7 +190,23 @@ Final Prompt = System Prompt + Conversation History + User Message → Model Inv
 
 ---
 
-## Slide 13: End-to-End Message Flow
+## Slide 13: Meet Pi — The Agent Behind It All
+
+### The agent powering OpenClaw
+
+**Built by Infellip** — the core AI runtime
+
+- Agent-native design — tools, memory, reasoning
+- Persistent context — remembers your workspace
+- Multi-model support — Claude, GPT, local models
+
+**Why it matters:** Pi is designed from the ground up for agentic workflows — tool use, memory search, session management, and streaming responses. This is what makes OpenClaw different from a chatbot — it's an agent that acts.
+
+**Fun fact:** "Pi" = Personal Intelligence — your agent, your context, your tools.
+
+---
+
+## Slide 14: End-to-End Message Flow
 
 ![End-to-End Flow](images/end2end-flow.jpg)
 
@@ -207,7 +223,7 @@ From user message to response:
 
 ---
 
-## Slide 14: Latency Breakdown
+## Slide 15: Latency Breakdown
 
 ### Where the time goes
 
@@ -224,7 +240,7 @@ From user message to response:
 
 ---
 
-## Slide 15: Multi-Agent Routing
+## Slide 16: Multi-Agent Routing
 
 ![Multi-Agent Routing](images/multi-agent-routing.jpg)
 
@@ -238,7 +254,7 @@ Each agent has its own workspace (AGENTS.md, SOUL.md, skills), isolated sessions
 
 ---
 
-## Slide 16: Get Started
+## Slide 17: Get Started
 
 ### One-liner install
 
@@ -256,7 +272,7 @@ openclaw gateway
 
 ---
 
-## Slide 17: What it Costs
+## Slide 18: What it Costs
 
 ### Running your own AI gateway
 
@@ -272,7 +288,7 @@ openclaw gateway
 
 ---
 
-## Slide 18: State Management
+## Slide 19: State Management
 
 ![State Management](images/state-management.jpg)
 
@@ -286,7 +302,7 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 19: Resources
+## Slide 20: Resources
 
 ### Links & Plugins
 
@@ -301,7 +317,7 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 20: What's Next? (Outlook)
+## Slide 21: What's Next? (Outlook)
 
 ### OpenClaw is growing fast
 
@@ -313,7 +329,7 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 21: Call to Action
+## Slide 22: Call to Action
 
 ### Try it now
 
@@ -325,7 +341,7 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 22: Q&A
+## Slide 23: Q&A
 
 ### Questions?
 
