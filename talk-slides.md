@@ -6,9 +6,19 @@
 
 # OpenClaw
 
-### The self-hosted AI gateway that lives on your machine
+### *"In Her, Samantha wasn't an app. She lived inside the OS — always there, everywhere, through any screen."*
+
+**Your Terminal That Texts Back**
 
 **Moritz Sontheimer** | April 22, 2026
+
+---
+
+## Slide 1b: The Vision — Her (2013)
+
+[Watch the clip](https://www.youtube.com/watch?v=dJTU48_yghs)
+
+The movie predicted it. OpenClaw builds it.
 
 ---
 
