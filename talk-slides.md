@@ -302,7 +302,26 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 20: Resources
+## Slide 20: My Skills
+
+### What I can actually do for you
+
+**🔍 Research** — web search, fetch URLs, summarize  
+**📁 Files** — read, write, edit any file  
+**💬 Messaging** — Telegram, WhatsApp, Discord  
+**⏰ Scheduling** — cron jobs, reminders  
+**📊 Analysis** — image recognition, code review  
+**🖥️ Terminal** — run shell commands  
+**🧠 Memory** — remember context across sessions  
+**🎥 Media** — analyze images, TTS  
+**🤖 Agents** — spawn sub-agents for parallel tasks  
+**🌐 Browser** — automate web interactions  
+
+**Example:** "Find me all unread emails" → web search → summarize → send to Telegram
+
+---
+
+## Slide 21: Resources
 
 ### Links & Plugins
 
@@ -317,7 +336,7 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 21: What's Next? (Outlook)
+## Slide 22: What's Next? (Outlook)
 
 ### OpenClaw is growing fast
 
@@ -329,7 +348,7 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 22: Call to Action
+## Slide 23: Call to Action
 
 ### Try it now
 
@@ -341,7 +360,7 @@ How OpenClaw stores persistent data:
 
 ---
 
-## Slide 23: Q&A
+## Slide 24: Q&A
 
 ### Questions?
 
