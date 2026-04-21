@@ -291,7 +291,7 @@
   <h1>OpenClaw</h1>
   <p class="subtitle">Your Terminal That Texts Back</p>
   <p class="meta">April 22, 2026 · Tech Talk</p>
-  <span class="slide-number">1 / 12</span>
+  <span class="slide-number">1 / 21</span>
 </div>
 
 <!-- Slide 2: The Problem -->
@@ -306,7 +306,7 @@
   <div class="highlight-box">
     <p><strong>The gap:</strong> Access without being at the machine</p>
   </div>
-  <span class="slide-number">2 / 12</span>
+  <span class="slide-number">2 / 21</span>
 </div>
 
 <!-- Slide 3: What is OpenClaw -->
@@ -333,7 +333,7 @@
               Cron...]</code></pre>
     </div>
   </div>
-  <span class="slide-number">3 / 12</span>
+  <span class="slide-number">3 / 21</span>
 </div>
 
 <!-- Slide 4: Why Techies Should Care -->
@@ -358,7 +358,7 @@
       <td>Your phone becomes a remote dev environment — from anywhere</td>
     </tr>
   </table>
-  <span class="slide-number">4 / 12</span>
+  <span class="slide-number">4 / 21</span>
 </div>
 
 <!-- Slide 5: Live Demo 1 -->
@@ -375,7 +375,7 @@
     <li>No browser opened, no copy-paste</li>
     <li>Just message → result</li>
   </ul>
-  <span class="slide-number">5 / 12</span>
+  <span class="slide-number">5 / 21</span>
 </div>
 
 <!-- Slide 6: Live Demo 2 -->
@@ -392,7 +392,7 @@
     <li>Real repo, real commit</li>
     <li>Perfect for on-call moments</li>
   </ul>
-  <span class="slide-number">6 / 12</span>
+  <span class="slide-number">6 / 21</span>
 </div>
 
 <!-- Slide 7: Live Demo 3 -->
@@ -410,13 +410,16 @@
     <li>Cron isn't just for servers — it's for <span class="accent">you</span></li>
     <li>Schedule once, forget about it</li>
   </ul>
-  <span class="slide-number">7 / 12</span>
+  <span class="slide-number">7 / 21</span>
 </div>
 
-<!-- Slide 8: Architecture -->
+<!-- Slide 8: System Architecture -->
 <div class="slide">
-  <h2>How It Works</h2>
-  <div class="two-col">
+  <h2>System Architecture</h2>
+  <div style="text-align: center; margin-bottom: 30px;">
+    <img src="images/system-architecture.jpg" alt="OpenClaw System Architecture Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 20px;">
     <div>
       <ul>
         <li><span class="accent">Gateway</span> — single source of truth</li>
@@ -447,10 +450,39 @@
     └── Cron</code></pre>
     </div>
   </div>
-  <span class="slide-number">8 / 12</span>
+  <span class="slide-number">8 / 21</span>
 </div>
 
-<!-- Slide 9: Security -->
+<!-- Slide 9: Extensibility through Plugins -->
+<div class="slide">
+  <h2>Extensibility through Plugins</h2>
+  <h3>Extend without modifying core code</h3>
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="images/plugins-architecture.jpg" alt="Plugin Architecture Diagram" style="max-width: 90%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 20px;">
+    <div>
+      <ul>
+        <li><span class="accent">Channel plugins</span> — Teams, Matrix, Mattermost</li>
+        <li><span class="accent2">Memory plugins</span> — vector stores, knowledge graphs</li>
+        <li><span class="accent">Tool plugins</span> — custom capabilities beyond bash/browser</li>
+        <li><span class="accent2">Provider plugins</span> — custom LLM providers, self-hosted models</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>How it works</h3>
+      <ul style="font-size: 0.85em;">
+        <li>Plugins live in <code>extensions/</code></li>
+        <li>Discovery via <code>openclaw.extensions</code> in package.json</li>
+        <li>Validated against TypeBox schemas</li>
+        <li>Hot-loaded when configured</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide-number">9 / 21</span>
+</div>
+
+<!-- Slide 10: Security -->
 <div class="slide">
   <h2>Security</h2>
   <h3>Control from the start</h3>
@@ -474,10 +506,120 @@
 }</code></pre>
     </div>
   </div>
-  <span class="slide-number">9 / 12</span>
+  <span class="slide-number">10 / 21</span>
 </div>
 
-<!-- Slide 10: Get Started -->
+<!-- Slide 11: System Prompt Architecture -->
+<div class="slide">
+  <h2>System Prompt Architecture</h2>
+  <h3>How OpenClaw builds context for the model</h3>
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="images/system-prompt-arch.jpg" alt="System Prompt Architecture Diagram" style="max-width: 90%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 15px;">
+    <div>
+      <ul>
+        <li><span class="accent">Workspace Files</span> — AGENTS.md, SOUL.md, TOOLS.md</li>
+        <li><span class="accent2">Dynamic Context</span> — Session history, Skills, Memory search</li>
+        <li><span class="accent">Tool Definitions</span> — Built-in + Plugin tools</li>
+        <li><span class="accent2">Base System</span> — Pi Agent core instructions</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Final Prompt</h3>
+      <ul style="font-size: 0.85em;">
+        <li>System Prompt → all inputs above</li>
+        <li>Conversation History → session context</li>
+        <li>User Message → current input</li>
+        <li>→ <span class="accent">Model Invocation</span></li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide-number">11 / 21</span>
+</div>
+
+<!-- Slide 12: End-to-End Message Flow -->
+<div class="slide">
+  <h2>End-to-End Message Flow</h2>
+  <h3>From user message to response</h3>
+  <div style="text-align: center; margin: 15px 0;">
+    <img src="images/end2end-flow.jpg" alt="End-to-End Message Flow Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 15px;">
+    <div>
+      <ul>
+        <li><span class="accent">User</span> → Channel Adapter → Gateway</li>
+        <li><span class="accent2">Access Control</span> validates permissions</li>
+        <li><span class="accent">Session Manager</span> loads context</li>
+        <li><span class="accent2">Agent Runtime</span> builds prompt</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><span class="accent">Model API</span> processes request</li>
+        <li><span class="accent2">Tool Executor</span> runs tools if needed</li>
+        <li><span class="accent">Session</span> saves state</li>
+        <li><span class="accent2">Response</span> streams back to user</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide-number">12 / 21</span>
+</div>
+
+<!-- Slide 13: Latency Breakdown -->
+<div class="slide">
+  <h2>Latency Breakdown</h2>
+  <h3>Where the time goes</h3>
+  <div class="two-col" style="margin-top: 30px;">
+    <div>
+      <table style="width: 100%; font-size: 0.95em;">
+        <tr><th>Step</th><th>Latency</th></tr>
+        <tr><td><span class="accent">Access Control</span></td><td>&lt;10ms</td></tr>
+        <tr><td><span class="accent2">Session Load</span></td><td>&lt;50ms</td></tr>
+        <tr><td><span class="accent">Prompt Assembly</span></td><td>&lt;100ms</td></tr>
+        <tr><td><span class="accent2">First Token (Model)</span></td><td>200-500ms</td></tr>
+        <tr><td><span class="accent">Tool: Bash</span></td><td>&lt;100ms</td></tr>
+        <tr><td><span class="accent2">Tool: Browser</span></td><td>1-3s</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Key Takeaway</h3>
+      <p style="font-size: 0.9em;">Most steps are <span class="accent">blazing fast</span>. The bottleneck is always the <span class="accent2">model inference</span> and <span class="accent">browser automation</span>.</p>
+      <p style="font-size: 0.85em; margin-top: 15px; color: var(--muted);">Tip: Use bash tools over browser when possible 🏃</p>
+    </div>
+  </div>
+  <span class="slide-number">13 / 21</span>
+</div>
+
+<!-- Slide 14: Multi-Agent Routing -->
+<div class="slide">
+  <h2>Multi-Agent Routing</h2>
+  <h3>Different channels → different agents</h3>
+  <div style="text-align: center; margin: 15px 0;">
+    <img src="images/multi-agent-routing.jpg" alt="Multi-Agent Routing Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 15px;">
+    <div>
+      <ul>
+        <li><span class="accent">Channel</span> → Session Resolution</li>
+        <li><span class="accent2">WhatsApp DM</span> → main session (Claude Opus)</li>
+        <li><span class="accent">Discord Group</span> → discord bot (Claude Sonnet)</li>
+        <li><span class="accent2">Telegram DM</span> → support agent (GPT-4o)</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>Each agent has its own workspace</li>
+        <li>Own <code>AGENTS.md</code>, <code>SOUL.md</code>, skills</li>
+        <li>Isolated sessions per sender</li>
+        <li>Route by channel, group, or user</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide-number">14 / 21</span>
+</div>
+
+<!-- Slide 15: Get Started -->
 <div class="slide">
   <h2>Get Started</h2>
   <h3>One-liner install</h3>
@@ -490,10 +632,81 @@ openclaw gateway</code></pre>
     <span>🚀</span>
   </div>
   <p class="muted">Five minutes. Literally.</p>
-  <span class="slide-number">10 / 12</span>
+  <span class="slide-number">15 / 21</span>
 </div>
 
-<!-- Slide 11: Resources -->
+<!-- Slide 16: What it Costs -->
+<div class="slide">
+  <h2>What it Costs</h2>
+  <h3>Running your own AI gateway</h3>
+  <table>
+    <tr>
+      <th>Component</th>
+      <th>Cost</th>
+    </tr>
+    <tr>
+      <td><span class="accent">OpenClaw</span></td>
+      <td>Free (self-hosted)</td>
+    </tr>
+    <tr>
+      <td><span class="accent2">Infrastructure</span></td>
+      <td>~€15/mo (Railway hobby)</td>
+    </tr>
+    <tr>
+      <td><span class="accent">Your machine</span></td>
+      <td>Already paid for</td>
+    </tr>
+  </table>
+  <div class="highlight-box">
+    <p>OpenClaw itself = free · AI models = bring your own API key · Hosting = cheap ($5-20/mo) or use your existing machine</p>
+  </div>
+  <span class="slide-number">16 / 21</span>
+</div>
+
+<!-- Slide 17: The Buzz -->
+<div class="slide">
+  <h2>The Buzz</h2>
+  <h3>Fastest growing open-source project? 👀</h3>
+  <div style="text-align: center; margin: 30px 0;">
+    <img src="images/star-history.jpg" alt="Star History chart comparing OpenClaw to React, Vue, Linux, and Next.js" style="max-width: 90%; border-radius: 16px; border: 1px solid #333;">
+  </div>
+  <p class="muted" style="text-align: center; font-size: 0.9em; margin-top: 20px;">
+    OpenClaw went from 0 to 180K GitHub stars in weeks. Yes, that's the vertical line. 😄
+  </p>
+  <p style="text-align: center; margin-top: 30px;">
+    <span class="accent2">Deep-dive by Paolo (Axiom):</span>
+    <a href="https://ppaolo.substack.com/p/openclaw-system-architecture-overview" style="color: var(--accent2);">ppaolo.substack.com</a>
+  </p>
+  <span class="slide-number">17 / 21</span>
+</div>
+
+<!-- Slide 18: State Management -->
+<div class="slide">
+  <h2>State Management</h2>
+  <h3>How OpenClaw stores persistent data</h3>
+  <div style="text-align: center; margin: 15px 0;">
+    <img src="images/state-management.jpg" alt="State Management Diagram" style="max-width: 90%; border-radius: 12px; border: 1px solid #333;">
+  </div>
+  <div class="two-col" style="margin-top: 15px;">
+    <div>
+      <ul>
+        <li><span class="accent">Workspace</span> — AGENTS.md, SOUL.md, TOOLS.md, skills/</li>
+        <li><span class="accent2">Config</span> — ~/.openclaw/openclaw.json</li>
+        <li><span class="accent">Environment Variables</span> — override config</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><span class="accent2">Credentials</span> — ~/.openclaw/credentials/</li>
+        <li><span class="accent">Sessions</span> — ~/.openclaw/sessions/</li>
+        <li><span class="accent2">Memory</span> — ~/.openclaw/memory/*.db</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide-number">18 / 21</span>
+</div>
+
+<!-- Slide 19: Resources -->
 <div class="slide">
   <h2>Resources</h2>
   <div class="two-col">
@@ -514,10 +727,16 @@ openclaw gateway</code></pre>
       </ul>
     </div>
   </div>
-  <span class="slide-number">11 / 12</span>
+  <div class="card" style="margin-top: 20px;">
+    <h3>Deep-dive by Paolo (Axiom)</h3>
+    <ul>
+      <li><a href="https://ppaolo.substack.com/p/openclaw-system-architecture-overview" style="color: var(--accent2);">OpenClaw Architecture Explained</a></li>
+    </ul>
+  </div>
+  <span class="slide-number">20 / 21</span>
 </div>
 
-<!-- Slide 12: CTA -->
+<!-- Slide 20: CTA -->
 <div class="slide cta">
   <div class="cta-box">
     <h2 style="margin-bottom: 30px;">Your terminal just learned to text back.</h2>
@@ -529,7 +748,21 @@ openclaw gateway</code></pre>
     </div>
   </div>
   <p style="margin-top: 40px;" class="muted">Live demo powered by Clawdia 🦞</p>
-  <span class="slide-number">12 / 12</span>
+  <span class="slide-number">21 / 21</span>
+</div>
+
+<!-- Slide 21: Q&A -->
+<div class="slide">
+  <h2>Questions?</h2>
+  <div style="text-align: center; margin-top: 50px;">
+    <div style="display: inline-block; background: var(--surface); border-radius: 16px; padding: 40px; border: 1px solid #333;">
+      <img src="images/linkedin-qr.png" alt="LinkedIn QR Code" style="width: 200px; border-radius: 8px;">
+      <p style="margin-top: 20px; color: var(--accent2);">Let's connect!</p>
+      <p style="color: var(--muted); font-size: 0.9em;">linkedin.com/in/moritzsontheimer</p>
+    </div>
+  </div>
+  <p style="text-align: center; margin-top: 60px;" class="muted">🦞</p>
+  <span class="slide-number">21 / 21</span>
 </div>
 
 </body>

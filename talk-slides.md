@@ -106,32 +106,33 @@ schedule: every 1 hour
 
 ---
 
-## Slide 8: Architecture
+## Slide 8: System Architecture
 
-### How it works
+![System Architecture](images/system-architecture.jpg)
 
-```
-┌─────────────────────────────────────┐
-│     Chat Apps (WA, TG, Discord)       │
-└─────────────────┬───────────────────┘
-                  │
-              [Gateway]
-                  │
-        ┌─────────┼─────────┐
-        ▼         ▼         ▼
-   [Sessions]  [Tools]  [Channels]
-        │
-        ▼
-   [Coding Agent] → Shell, Git, Browser, etc.
-```
-
-- Single Gateway process
-- Channel plugins
-- Isolated sessions per sender
+- **Gateway** — single source of truth
+- **Channel plugins** — each chat app
+- **Sessions** — isolated per sender
+- **Tools** — shell, git, browser, cron
 
 ---
 
-## Slide 9: Security
+## Slide 9: Extensibility through Plugins
+
+![Plugin Architecture](images/plugins-architecture.jpg)
+
+Extend without modifying core code:
+
+- **Channel plugins** — Teams, Matrix, Mattermost
+- **Memory plugins** — vector stores, knowledge graphs
+- **Tool plugins** — custom capabilities beyond bash/browser
+- **Provider plugins** — custom LLM providers, self-hosted models
+
+Plugin discovery via `openclaw.extensions` in package.json, validated against TypeBox schemas, hot-loaded when configured.
+
+---
+
+## Slide 10: Security
 
 ### Control from the start
 
@@ -152,7 +153,70 @@ schedule: every 1 hour
 
 ---
 
-## Slide 10: Get Started
+## Slide 11: System Prompt Architecture
+
+![System Prompt Architecture](images/system-prompt-arch.jpg)
+
+How OpenClaw builds context for the model:
+
+- **Workspace Files** — AGENTS.md, SOUL.md, TOOLS.md
+- **Dynamic Context** — Session history, Skills, Memory search
+- **Tool Definitions** — Built-in + Plugin tools
+- **Base System** — Pi Agent core instructions
+
+Final Prompt = System Prompt + Conversation History + User Message → Model Invocation
+
+---
+
+## Slide 12: End-to-End Message Flow
+
+![End-to-End Flow](images/end2end-flow.jpg)
+
+From user message to response:
+
+1. User → Channel Adapter → Gateway
+2. Access Control validates permissions
+3. Session Manager loads context
+4. Agent Runtime builds prompt
+5. Model API processes request
+6. Tool Executor runs tools if needed
+7. Session saves state
+8. Response streams back to user
+
+---
+
+## Slide 13: Latency Breakdown
+
+### Where the time goes
+
+| Step | Latency |
+|------|---------|
+| Access Control | <10ms |
+| Session Load | <50ms |
+| Prompt Assembly | <100ms |
+| First Token (Model) | 200-500ms |
+| Tool: Bash | <100ms |
+| Tool: Browser | 1-3s |
+
+**Key:** Most steps are fast. Bottleneck = model inference + browser automation.
+
+---
+
+## Slide 14: Multi-Agent Routing
+
+![Multi-Agent Routing](images/multi-agent-routing.jpg)
+
+Different channels → different agents:
+
+- **WhatsApp DM** → main session (Claude Opus)
+- **Discord Group** → discord bot (Claude Sonnet)
+- **Telegram DM** → support agent (GPT-4o)
+
+Each agent has its own workspace (AGENTS.md, SOUL.md, skills), isolated sessions, route by channel/group/user.
+
+---
+
+## Slide 15: Get Started
 
 ### One-liner install
 
@@ -170,7 +234,64 @@ openclaw gateway
 
 ---
 
-## Slide 11: Call to Action
+## Slide 16: What it Costs
+
+### Running your own AI gateway
+
+| Component | Cost |
+|-----------|------|
+| **OpenClaw** | Free (self-hosted) |
+| **Infrastructure** | ~€15/mo (Railway hobby) |
+| **Your machine** | Already paid for |
+
+- OpenClaw itself = free
+- AI models = bring your own API key
+- Hosting = cheap ($5-20/mo) or use your existing machine
+
+---
+
+## Slide 17: The Buzz
+
+### Fastest growing open-source project? 👀
+
+![Star History](images/star-history.jpg)
+
+OpenClaw went from 0 to 180K GitHub stars in weeks. That's the vertical line. 😄
+
+**Deep-dive by Paolo (Axiom):** https://ppaolo.substack.com/p/openclaw-system-architecture-overview
+
+---
+
+## Slide 18: State Management
+
+![State Management](images/state-management.jpg)
+
+How OpenClaw stores persistent data:
+
+- **Workspace** — AGENTS.md, SOUL.md, TOOLS.md, skills/
+- **Config** — ~/.openclaw/openclaw.json
+- **Credentials** — ~/.openclaw/credentials/
+- **Sessions** — ~/.openclaw/sessions/
+- **Memory** — ~/.openclaw/memory/*.db
+
+---
+
+## Slide 19: Resources
+
+### Links & Plugins
+
+- Docs: docs.openclaw.ai
+- GitHub: github.com/openclaw/openclaw
+- Discord: discord.gg/clawd
+- Skills: clawhub.com
+
+**Plugins:** WhatsApp, Signal, iMessage, Slack, Google Chat, Mattermost
+
+**Deep-dive by Paolo (Axiom):** https://ppaolo.substack.com/p/openclaw-system-architecture-overview
+
+---
+
+## Slide 20: Call to Action
 
 ### Try it now
 
@@ -182,12 +303,12 @@ openclaw gateway
 
 ---
 
-## Slide 12: Q&A
+## Slide 21: Q&A
 
 ### Questions?
 
-- Docs: docs.openclaw.ai
-- GitHub: github.com/openclaw/openclaw
-- Find me: @bausparfuchs
+![LinkedIn QR](images/linkedin-qr.png)
+
+**Let's connect!** — linkedin.com/in/moritzsontheimer
 
 _Live demo powered by Clawdia 🦞_
