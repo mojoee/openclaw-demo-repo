@@ -287,7 +287,26 @@ Wie OpenClaw persistente Daten speichert:
 
 ---
 
-## Folie 19: Ressourcen
+## Folie 19: Meine Fähigkeiten
+
+### Was ich wirklich für dich tun kann
+
+**🔍 Recherche** — Websuche, URLs abrufen, zusammenfassen  
+**📁 Dateien** — Lesen, schreiben, bearbeiten  
+**💬 Messaging** — Telegram, WhatsApp, Discord  
+**⏰ Planung** — Cron-Jobs, Erinnerungen  
+**📊 Analyse** — Bilderkennung, Code-Review  
+**🖥️ Terminal** — Shell-Befehle ausführen  
+**🧠 Memory** — Kontext über Sessions hinweg merken  
+**🎥 Medien** — Bilder analysieren, TTS  
+**🤖 Agents** — Sub-Agents für parallele Aufgaben starten  
+**🌐 Browser** — Web-Interaktionen automatisieren  
+
+**Beispiel:** "Finde alle ungelesenen E-Mails von heute" → Websuche → Zusammenfassen → Zu Telegram senden
+
+---
+
+## Folie 20: Ressourcen
 
 ### Links & Plugins
 
@@ -302,7 +321,7 @@ Wie OpenClaw persistente Daten speichert:
 
 ---
 
-## Folie 20: Was kommt als Nächstes? (Ausblick)
+## Folie 21: Was kommt als Nächstes? (Ausblick)
 
 ### OpenClaw wächst schnell
 
@@ -314,7 +333,7 @@ Wie OpenClaw persistente Daten speichert:
 
 ---
 
-## Folie 21: Call to Action
+## Folie 22: Call to Action
 
 ### Probier's heute Nacht
 
@@ -326,7 +345,7 @@ Wie OpenClaw persistente Daten speichert:
 
 ---
 
-## Folie 22: Q&A
+## Folie 23: Q&A
 
 ### Fragen?
 

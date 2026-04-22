@@ -288,21 +288,7 @@ openclaw gateway
 
 ---
 
-## Slide 19: State Management
-
-![State Management](images/state-management.jpg)
-
-How OpenClaw stores persistent data:
-
-- **Workspace** — AGENTS.md, SOUL.md, TOOLS.md, skills/
-- **Config** — ~/.openclaw/openclaw.json
-- **Credentials** — ~/.openclaw/credentials/
-- **Sessions** — ~/.openclaw/sessions/
-- **Memory** — ~/.openclaw/memory/*.db
-
----
-
-## Slide 20: My Skills
+## Slide 19: My Skills
 
 ### What I can actually do for you
 
@@ -318,6 +304,20 @@ How OpenClaw stores persistent data:
 **🌐 Browser** — automate web interactions  
 
 **Example:** "Find me all unread emails" → web search → summarize → send to Telegram
+
+---
+
+## Slide 20: State Management
+
+![State Management](images/state-management.jpg)
+
+How OpenClaw stores persistent data:
+
+- **Workspace** — AGENTS.md, SOUL.md, TOOLS.md, skills/
+- **Config** — ~/.openclaw/openclaw.json
+- **Credentials** — ~/.openclaw/credentials/
+- **Sessions** — ~/.openclaw/sessions/
+- **Memory** — ~/.openclaw/memory/*.db
 
 ---
 
