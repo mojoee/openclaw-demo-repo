@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenClaw Talk — Deutsch</title>
+  <title>OpenClaw Talk</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
@@ -290,50 +290,50 @@
   <div class="lobster">🦞</div>
   <h1>OpenClaw</h1>
   <p class="subtitle" style="font-size: 1.4em; font-style: italic; color: var(--text); margin-bottom: 20px;">_"In Her, Samantha wasn't an app. She lived inside the OS — always there, everywhere, through any screen."_</p>
-  <p class="subtitle">Dein Terminal, das zurücktextet</p>
-  <p class="meta">22. April 2026 · Tech Talk</p>
+  <p class="subtitle">Your Terminal That Texts Back</p>
+  <p class="meta">April 22, 2026 · Tech Talk</p>
   <span class="slide-number">1 / 24</span>
 </div>
 
-<!-- Slide 1b: Her Filmausschnitt -->
+<!-- Slide 1b: Her Movie Clip -->
 <div class="slide">
-  <h2>Die Vision: Her (2013)</h2>
+  <h2>The Vision: Her (2013)</h2>
   <div style="text-align: center; margin: 20px 0;">
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 800px; margin: 0 auto; border-radius: 12px;">
       <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/dJTU48_yghs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-  <p class="muted" style="text-align: center; margin-top: 20px;">Der Film hat es vorhergesagt. OpenClaw baut es.</p>
-  <p style="text-align: center; margin-top: 10px;"><a href="https://www.youtube.com/watch?v=dJTU48_yghs" target="_blank" style="color: var(--accent2);">Auf YouTube öffnen ↗</a></p>
+  <p class="muted" style="text-align: center; margin-top: 20px;">The movie predicted it. OpenClaw builds it.</p>
+  <p style="text-align: center; margin-top: 10px;"><a href="https://www.youtube.com/watch?v=dJTU48_yghs" target="_blank" style="color: var(--accent2);">Open in YouTube ↗</a></p>
   <span class="slide-number">1b / 24</span>
 </div>
 
-<!-- Slide 2: Das Problem -->
+<!-- Slide 2: The Problem -->
 <div class="slide">
-  <h2>Das Problem</h2>
-  <h3>Was, wenn dein Terminal dir antworten könnte?</h3>
+  <h2>The Problem</h2>
+  <h3>What if your terminal could message back?</h3>
   <ul>
     <li>AI coding agents are <span class="accent">powerful</span>... but stuck in the terminal</li>
     <li>Need to be at your keyboard to use them</li>
     <li>What if you could message your dev machine <span class="accent2">from anywhere</span>?</li>
   </ul>
   <div class="highlight-box">
-    <p><strong>Die Lücke:</strong> Zugriff ohne am Rechner zu sitzen</p>
+    <p><strong>The gap:</strong> Access without being at the machine</p>
   </div>
   <span class="slide-number">2 / 24</span>
 </div>
 
 <!-- Slide 3: What is OpenClaw -->
 <div class="slide">
-  <h2>Was ist OpenClaw?</h2>
-  <h3>Self-hosted AI Gateway</h3>
+  <h2>What is OpenClaw?</h2>
+  <h3>Self-hosted AI gateway</h3>
   <div class="two-col">
     <div>
       <ul>
-        <li><span class="accent">Läuft lokal</span> — on your machine or server</li>
-        <li><span class="accent2">Multi-Channel</span> — WA, Telegram, Discord, iMessage</li>
-        <li><span class="accent">Agent-nativ</span> — built for coding agents</li>
-        <li><span class="accent2">Deine Daten, deine Regeln</span> — no vendor lock-in</li>
+        <li><span class="accent">Runs locally</span> — on your machine or server</li>
+        <li><span class="accent2">Multi-channel</span> — WA, Telegram, Discord, iMessage</li>
+        <li><span class="accent">Agent-native</span> — built for coding agents</li>
+        <li><span class="accent2">Your data, your rules</span> — no vendor lock-in</li>
       </ul>
     </div>
     <div class="card">
@@ -350,9 +350,9 @@
   <span class="slide-number">3 / 24</span>
 </div>
 
-<!-- Slide 4: Warum Techies das interessiert -->
+<!-- Slide 4: Why Techies Should Care -->
 <div class="slide">
-  <h2>Warum Techies das interessiert</h2>
+  <h2>Why Techies Should Care</h2>
   <h3>4 Key Benefits</h3>
   <table>
     <tr>
@@ -377,9 +377,9 @@
 
 
 
-<!-- Slide 5: Das Gerede -->
+<!-- Slide 5: The Buzz -->
 <div class="slide">
-  <h2>Das Gerede</h2>
+  <h2>The Buzz</h2>
   <h3>Fastest growing open-source project? 👀</h3>
   <div style="text-align: center; margin: 30px 0;">
     <img src="images/star-history.jpg" alt="Star History chart comparing OpenClaw to React, Vue, Linux, and Next.js" style="max-width: 90%; border-radius: 16px; border: 1px solid #333;">
@@ -399,7 +399,7 @@
 <!-- Slide 6: Live Demo 1 -->
 <div class="slide">
   <h2>Live Demo 1</h2>
-  <h3>Recherche — direkt aus dem Chat</h3>
+  <h3>Research — from your chat</h3>
   <div class="demo-box">
     <div class="emoji">🔍</div>
     <h3>"Show me the latest OpenClaw features"</h3>
@@ -416,7 +416,7 @@
 <!-- Slide 7: Live Demo 2 -->
 <div class="slide">
   <h2>Live Demo 2</h2>
-  <h3>Git Workflow — direkt vom Handy</h3>
+  <h3>Git Workflow — from your phone</h3>
   <div class="demo-box">
     <div class="emoji">📱 → 💻</div>
     <h3>"Add a feature, commit, push"</h3>
@@ -433,7 +433,7 @@
 <!-- Slide 8: Live Demo 3 -->
 <div class="slide">
   <h2>Live Demo 3</h2>
-  <h3>Cron Jobs — geplante Automatisierung</h3>
+  <h3>Cron Jobs — scheduled automation</h3>
   <div class="demo-box">
     <div class="emoji">⏰</div>
     <h3>"This runs on a schedule"</h3>
@@ -448,18 +448,18 @@
   <span class="slide-number">8 / 24</span>
 </div>
 
-<!-- Slide 9: Systemarchitektur -->
+<!-- Slide 9: System Architecture -->
 <div class="slide">
-  <h2>Systemarchitektur</h2>
+  <h2>System Architecture</h2>
   <div style="text-align: center; margin-bottom: 30px;">
     <img src="images/system-architecture.jpg" alt="OpenClaw System Architecture Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
   </div>
   <div class="two-col" style="margin-top: 20px;">
     <div>
       <ul>
-        <li><span class="accent">Gateway</span> — zentrale Anlaufstelle</li>
-        <li><span class="accent2">Channel plugins</span> — jede Chat-App</li>
-        <li><span class="accent">Sessions</span> — isoliert pro Absender</li>
+        <li><span class="accent">Gateway</span> — single source of truth</li>
+        <li><span class="accent2">Channel plugins</span> — each chat app</li>
+        <li><span class="accent">Sessions</span> — isolated per sender</li>
         <li><span class="accent2">Tools</span> — shell, git, browser, cron</li>
       </ul>
     </div>
@@ -488,9 +488,9 @@
   <span class="slide-number">9 / 24</span>
   </div>
 
-<!-- Slide 10: Erweiterbarkeit durch Plugins -->
+<!-- Slide 10: Extensibility through Plugins -->
 <div class="slide">
-  <h2>Erweiterbarkeit durch Plugins</h2>
+  <h2>Extensibility through Plugins</h2>
   <h3>Extend without modifying core code</h3>
   <div style="text-align: center; margin: 20px 0;">
     <img src="images/plugins-architecture.jpg" alt="Plugin Architecture Diagram" style="max-width: 90%; border-radius: 12px; border: 1px solid #333;">
@@ -517,9 +517,9 @@
   <span class="slide-number">10 / 24</span>
 </div>
 
-<!-- Slide 11: Sicherheit -->
+<!-- Slide 11: Security -->
 <div class="slide">
-  <h2>Sicherheit</h2>
+  <h2>Security</h2>
   <h3>Control from the start</h3>
   <div class="two-col">
     <div>
@@ -544,9 +544,9 @@
   <span class="slide-number">11 / 24</span>
 </div>
 
-<!-- Slide 12: System-Prompt-Architektur -->
+<!-- Slide 12: System Prompt Architecture -->
 <div class="slide">
-  <h2>System-Prompt-Architektur</h2>
+  <h2>System Prompt Architecture</h2>
   <h3>How OpenClaw builds context for the model</h3>
   <div style="text-align: center; margin: 20px 0;">
     <img src="images/system-prompt-arch.jpg" alt="System Prompt Architecture Diagram" style="max-width: 90%; border-radius: 12px; border: 1px solid #333;">
@@ -575,19 +575,19 @@
 
 <!-- Slide 13: Meet Pi — The Agent Behind It All -->
 <div class="slide">
-  <h2>Pi kennenlernen</h2>
-  <h3>Der Agent hinter OpenClaw</h3>
+  <h2>Meet Pi</h2>
+  <h3>The agent powering OpenClaw</h3>
   <div class="two-col" style="margin-top: 30px;">
     <div>
       <ul>
-        <li><span class="accent">Entwickelt von Infellip</span> — the core AI runtime</li>
-        <li><span class="accent2">Agent-nativ design</span> — tools, memory, reasoning</li>
-        <li><span class="accent">Persistenter Kontext</span> — remembers your workspace</li>
-        <li><span class="accent2">Multi-Modell-Support</span> — Claude, GPT, local models</li>
+        <li><span class="accent">Built by Infellip</span> — the core AI runtime</li>
+        <li><span class="accent2">Agent-native design</span> — tools, memory, reasoning</li>
+        <li><span class="accent">Persistent context</span> — remembers your workspace</li>
+        <li><span class="accent2">Multi-model support</span> — Claude, GPT, local models</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Warum das wichtig ist</h3>
+      <h3>Why it matters</h3>
       <p style="font-size: 0.9em;">Pi isn't just a chat wrapper. It's designed from the ground up for <span class="accent">agentic workflows</span> — tool use, memory search, session management, and streaming responses.</p>
       <p style="font-size: 0.85em; margin-top: 10px; color: var(--muted);">This is what makes OpenClaw different from a chatbot — it's an <span class="accent2">agent that acts</span>.</p>
     </div>
@@ -598,9 +598,9 @@
   <span class="slide-number">13 / 24</span>
 </div>
 
-<!-- Slide 14: Ende-zu-Ende-Nachrichtenfluss -->
+<!-- Slide 14: End-to-End Message Flow -->
 <div class="slide">
-  <h2>Ende-zu-Ende-Nachrichtenfluss</h2>
+  <h2>End-to-End Message Flow</h2>
   <h3>From user message to response</h3>
   <div style="text-align: center; margin: 15px 0;">
     <img src="images/end2end-flow.jpg" alt="End-to-End Message Flow Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
@@ -626,9 +626,9 @@
   <span class="slide-number">14 / 24</span>
 </div>
 
-<!-- Slide 15: Latenz-Analyse -->
+<!-- Slide 15: Latency Breakdown -->
 <div class="slide">
-  <h2>Latenz-Analyse</h2>
+  <h2>Latency Breakdown</h2>
   <h3>Where the time goes</h3>
   <div class="two-col" style="margin-top: 30px;">
     <div>
@@ -651,9 +651,9 @@
   <span class="slide-number">15 / 24</span>
   </div>
 
-<!-- Slide 16: Multi-Agent-Routing -->
+<!-- Slide 16: Multi-Agent Routing -->
 <div class="slide">
-  <h2>Multi-Agent-Routing</h2>
+  <h2>Multi-Agent Routing</h2>
   <h3>Different channels → different agents</h3>
   <div style="text-align: center; margin: 15px 0;">
     <img src="images/multi-agent-routing.jpg" alt="Multi-Agent Routing Diagram" style="max-width: 95%; border-radius: 12px; border: 1px solid #333;">
@@ -679,9 +679,9 @@
   <span class="slide-number">16 / 24</span>
 </div>
 
-<!-- Slide 17: Loslegen -->
+<!-- Slide 17: Get Started -->
 <div class="slide">
-  <h2>Loslegen</h2>
+  <h2>Get Started</h2>
   <h3>One-liner install</h3>
   <pre><code>npm install -g openclaw@latest
 openclaw onboard
@@ -691,13 +691,13 @@ openclaw gateway</code></pre>
     <span>⚙️</span>
     <span>🚀</span>
   </div>
-  <p class="muted">Fünf Minuten. Buchstäblich.</p>
+  <p class="muted">Five minutes. Literally.</p>
   <span class="slide-number">17 / 24</span>
 </div>
 
-<!-- Slide 18: Was es kostet -->
+<!-- Slide 18: What it Costs -->
 <div class="slide">
-  <h2>Was es kostet</h2>
+  <h2>What it Costs</h2>
   <h3>Running your own AI gateway</h3>
   <table>
     <tr>
@@ -725,7 +725,7 @@ openclaw gateway</code></pre>
 
 <!-- Slide 19: My Skills (Tools I Can Use) -->
 <div class="slide">
-  <h2>Meine Fähigkeiten</h2>
+  <h2>My Skills</h2>
   <h3>What I can actually do for you</h3>
   <div class="two-col" style="margin-top: 25px;">
     <div>
@@ -779,9 +779,9 @@ openclaw gateway</code></pre>
   <span class="slide-number">18 / 24</span>
 </div>
 
-<!-- Slide 21: Ressourcen -->
+<!-- Slide 21: Resources -->
 <div class="slide">
-  <h2>Ressourcen</h2>
+  <h2>Resources</h2>
   <div class="two-col">
     <div class="card">
       <h3>Documentation</h3>
@@ -809,9 +809,9 @@ openclaw gateway</code></pre>
   <span class="slide-number">21 / 24</span>
   </div>
 
-<!-- Slide 22: Was kommt als Nächstes (Outlook) -->
+<!-- Slide 22: What's Next (Outlook) -->
 <div class="slide">
-  <h2>Was kommt als Nächstes?</h2>
+  <h2>What's Next?</h2>
   <h3>OpenClaw is growing fast</h3>
   <div style="text-align: center; margin: 20px 0;">
     <div style="background: var(--surface); border-radius: 16px; padding: 30px; border: 1px solid #333; display: inline-block;">
@@ -846,21 +846,21 @@ openclaw gateway</code></pre>
 <!-- Slide 23: CTA -->
 <div class="slide cta">
   <div class="cta-box">
-    <h2 style="margin-bottom: 30px;">Dein Terminal hat gerade gelernt zurückzutexten.</h2>
-    <p style="font-size: 1.5em; margin-bottom: 30px;">Probier es heute Abend aus.</p>
+    <h2 style="margin-bottom: 30px;">Your terminal just learned to text back.</h2>
+    <p style="font-size: 1.5em; margin-bottom: 30px;">Try it tonight.</p>
     <div class="links">
       <a href="https://docs.openclaw.ai">Docs</a>
       <a href="https://github.com/openclaw/openclaw">GitHub</a>
       <a href="https://discord.gg/clawd">Discord</a>
     </div>
   </div>
-  <p style="margin-top: 40px;" class="muted">Live-Demo mit Clawdia 🦞</p>
+  <p style="margin-top: 40px;" class="muted">Live demo powered by Clawdia 🦞</p>
   <span class="slide-number">23 / 24</span>
 </div>
 
-<!-- Slide 24: Fragen -->
+<!-- Slide 24: Q&A -->
 <div class="slide">
-  <h2>Fragen?</h2>
+  <h2>Questions?</h2>
   <div style="text-align: center; margin-top: 50px;">
     <div style="display: inline-block; background: var(--surface); border-radius: 16px; padding: 40px; border: 1px solid #333;">
       <img src="images/linkedin-qr.png" alt="LinkedIn QR Code" style="width: 200px; border-radius: 8px;">
