@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw Demo</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #1a1a24;
+      --text: #e8e8ed;
+      --muted: #8888a0;
+      --accent: #ff6b35;
+      --accent2: #00d4aa;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .slide {
+      min-height: 100vh;
+      padding: 60px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid #222;
+    }
+    h1 { font-size: 3.5em; color: var(--accent2); margin-bottom: 20px; }
+    h2 { font-size: 2.5em; color: var(--accent2); margin-bottom: 30px; }
+    h3 { font-size: 1.5em; color: var(--muted); margin-bottom: 20px; font-weight: 400; }
+    p, li { font-size: 1.3em; line-height: 1.6; color: var(--text); }
+    li { margin-left: 30px; margin-bottom: 15px; }
+    .accent { color: var(--accent); }
+    .accent2 { color: var(--accent2); }
+    .muted { color: var(--muted); }
+    .slide-number {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .title-slide {
+      text-align: center;
+      justify-content: center;
+    }
+    .title-slide h1 {
+      font-size: 5em;
+      margin-bottom: 30px;
+    }
+    .title-slide .subtitle {
+      font-size: 2em;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+    .title-slide .meta {
+      font-size: 1.2em;
+      color: var(--muted);
+    }
+    .demo-box {
+      background: var(--surface);
+      border: 2px solid var(--accent2);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    .demo-box .emoji { font-size: 4em; margin-bottom: 20px; }
+    .demo-box h3 { color: var(--text); font-size: 1.8em; }
+    .demo-box p { color: var(--muted); font-size: 1.1em; }
+    .highlight-box {
+      background: linear-gradient(135deg, var(--accent) 0%, #ff8c5a 100%);
+      color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    .highlight-box p { color: white; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 40px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 30px;
+      border: 1px solid #333;
+    }
+    .card h3 { color: var(--accent2); margin-bottom: 20px; }
+    pre {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 1em;
+      overflow-x: auto;
+      border: 1px solid #333;
+    }
+    code { color: var(--accent2); }
+    a { color: var(--accent2); }
+    .cta-slide {
+      text-align: center;
+    }
+    .links a {
+      display: inline-block;
+      margin: 0 20px;
+      font-size: 1.5em;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 15px 30px;
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .links a:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .big-emoji { font-size: 8em; text-align: center; }
+    @media (max-width: 768px) {
+      .slide { padding: 40px; }
+      h1 { font-size: 2.5em; }
+      h2 { font-size: 2em; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Slide 1: Her Opener + Title -->
+<div class="slide title-slide">
+  <h3 style="color: var(--accent); margin-bottom: 20px;">Die Vision: Her (2013)</h3>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/dJTU48_yghs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <p class="subtitle" style="margin-top: 30px;">Dein Terminal, das zurücktextet</p>
+  <p class="meta">OpenClaw Demo</p>
+  <span class="slide-number">1 / 5</span>
+</div>
+
+<!-- Slide 1b: Star History -->
+<div class="slide" style="text-align: center;">
+  <h2 style="color: var(--accent);">Immer beliebter</h2>
+  <div style="margin-top: 30px;">
+    <img src="images/star-history.jpg" alt="Star History — OpenClaw vs React, Vue, Linux, Next.js" style="max-width: 90%; max-height: 65vh; border-radius: 16px; border: 1px solid #333;">
+  </div>
+  <p style="margin-top: 20px;" class="muted">OpenClaw wächst schnell — mach mit!</p>
+  <span class="slide-number">1b / 5</span>
+</div>
+
+<!-- Slide 2: Demo 1 - Research -->
+<div class="slide">
+  <h2>Demo 1: Recherche</h2>
+  <h3>Einfach fragen — kein Browser, kein Copy-Paste</h3>
+  <div class="demo-box">
+    <div class="emoji">🔍</div>
+    <h3>"Zeig mir die neuesten OpenClaw Releases"</h3>
+    <p>web_search → web_fetch → zusammenfassen → Ergebnis</p>
+  </div>
+  <ul style="margin-top: 30px;">
+    <li>Echte Konversation, nicht voraufgenommen</li>
+    <li>Kein Browser geöffnet, kein Copy-Paste</li>
+    <li>Einfach Nachricht → Ergebnis</li>
+  </ul>
+  <span class="slide-number">2 / 6</span>
+</div>
+
+<!-- Slide 3: Demo 2 - Git -->
+<div class="slide">
+  <h2>Demo 2: Git Workflow</h2>
+  <h3>Steuer deine Repos vom Handy</h3>
+  <div class="demo-box">
+    <div class="emoji">📱 → 💻</div>
+    <h3>"Feature hinzufügen, committen, pushen"</h3>
+    <p>Schreiben → git add → git commit → git push</p>
+  </div>
+  <ul style="margin-top: 30px;">
+    <li>Code schreiben ohne Laptop</li>
+    <li>Perfekt für On-Call-Situationen</li>
+  </ul>
+  <span class="slide-number">3 / 6</span>
+</div>
+
+<!-- Slide 4: Demo 3 - Cron -->
+<div class="slide">
+  <h2>Demo 3: Geplante Aufgaben</h2>
+  <h3>Cron Jobs — für deine persönlichen Workflows</h3>
+  <div class="demo-box">
+    <div class="emoji">⏰</div>
+    <h3>"Das läuft jeden Morgen"</h3>
+    <p>Erinnerungen · Daily Briefings · Automatische Checks</p>
+  </div>
+  <ul style="margin-top: 30px;">
+    <li>Einmal planen, vergessen</li>
+    <li>Delivered to your chat, <span class="accent2">wann immer du es brauchst</span></li>
+  </ul>
+  <span class="slide-number">4 / 6</span>
+</div>
+
+<!-- Slide 5: Loslegen -->
+<div class="slide">
+  <h2>Loslegen</h2>
+  <h3>Fünf Minuten. Buchstäblich.</h3>
+  <div style="margin-top: 40px;">
+    <pre style="font-size: 1.3em;"><code>brew install openclaw
+openclaw gateway</code></pre>
+  </div>
+  <div class="highlight-box" style="margin-top: 40px; text-align: center;">
+    <p style="font-size: 1.3em;"><strong>Fertig.</strong> Dein Terminal antwortet jetzt auf Nachrichten.</p>
+  </div>
+  <div style="text-align: center; margin-top: 40px;">
+    <p><a href="https://docs.openclaw.ai" class="accent2" style="font-size: 1.2em;">docs.openclaw.ai</a></p>
+    <p style="margin-top: 10px;" class="muted">OpenClaw ist kostenlos • KI-Modelle = eigener API-Key</p>
+  </div>
+  <span class="slide-number">5 / 6</span>
+</div>
+
+</body>
+</html>
