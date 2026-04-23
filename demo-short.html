@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw Demo</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #1a1a24;
+      --text: #e8e8ed;
+      --muted: #8888a0;
+      --accent: #ff6b35;
+      --accent2: #00d4aa;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .slide {
+      min-height: 100vh;
+      padding: 60px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid #222;
+    }
+    h1 { font-size: 3.5em; color: var(--accent2); margin-bottom: 20px; }
+    h2 { font-size: 2.5em; color: var(--accent2); margin-bottom: 30px; }
+    h3 { font-size: 1.5em; color: var(--muted); margin-bottom: 20px; font-weight: 400; }
+    p, li { font-size: 1.3em; line-height: 1.6; color: var(--text); }
+    li { margin-left: 30px; margin-bottom: 15px; }
+    .accent { color: var(--accent); }
+    .accent2 { color: var(--accent2); }
+    .muted { color: var(--muted); }
+    .slide-number {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .title-slide {
+      text-align: center;
+      justify-content: center;
+    }
+    .title-slide h1 {
+      font-size: 5em;
+      margin-bottom: 30px;
+    }
+    .title-slide .subtitle {
+      font-size: 2em;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+    .title-slide .meta {
+      font-size: 1.2em;
+      color: var(--muted);
+    }
+    .demo-box {
+      background: var(--surface);
+      border: 2px solid var(--accent2);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    .demo-box .emoji { font-size: 4em; margin-bottom: 20px; }
+    .demo-box h3 { color: var(--text); font-size: 1.8em; }
+    .demo-box p { color: var(--muted); font-size: 1.1em; }
+    .highlight-box {
+      background: linear-gradient(135deg, var(--accent) 0%, #ff8c5a 100%);
+      color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    .highlight-box p { color: white; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 40px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 30px;
+      border: 1px solid #333;
+    }
+    .card h3 { color: var(--accent2); margin-bottom: 20px; }
+    pre {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 1em;
+      overflow-x: auto;
+      border: 1px solid #333;
+    }
+    code { color: var(--accent2); }
+    a { color: var(--accent2); }
+    .cta-slide {
+      text-align: center;
+    }
+    .cta-slide h2 { font-size: 3em; color: var(--text); margin-bottom: 30px; }
+    .links a {
+      display: inline-block;
+      margin: 0 20px;
+      font-size: 1.5em;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 15px 30px;
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .links a:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .big-emoji { font-size: 6em; text-align: center; }
+    @media (max-width: 768px) {
+      .slide { padding: 40px; }
+      h1 { font-size: 2.5em; }
+      h2 { font-size: 2em; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide title-slide">
+  <h1>OpenClaw</h1>
+  <p class="subtitle">Your Terminal That Texts Back</p>
+  <p class="meta">Quick Demo — 10 minutes</p>
+  <span class="slide-number">1 / 10</span>
+</div>
+
+<!-- Slide 2: The Problem -->
+<div class="slide">
+  <h2>The Problem</h2>
+  <h3>AI coding agents are powerful — but stuck in the terminal</h3>
+  <ul style="margin-top: 40px;">
+    <li>You need to be <span class="accent">at your keyboard</span> to use them</li>
+    <li>What if you could message your dev machine <span class="accent2">from anywhere?</span></li>
+    <li>From your phone, from bed, from anywhere</li>
+  </ul>
+  <div class="highlight-box" style="margin-top: 40px;">
+    <p><strong>The gap:</strong> Access without being at the machine</p>
+  </div>
+  <span class="slide-number">2 / 10</span>
+</div>
+
+<!-- Slide 3: What is OpenClaw? -->
+<div class="slide">
+  <h2>What is OpenClaw?</h2>
+  <h3>A self-hosted AI gateway for coding agents</h3>
+  <div class="two-col" style="margin-top: 40px;">
+    <div class="card">
+      <h3>Key Features</h3>
+      <ul>
+        <li><span class="accent">Runs locally</span> — on your machine or server</li>
+        <li><span class="accent2">Multi-channel</span> — Telegram, WhatsApp, Discord, iMessage</li>
+        <li><span class="accent">Agent-native</span> — built for coding agents</li>
+        <li><span class="accent2">Your data, your rules</span> — no vendor lock-in</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What You Get</h3>
+      <ul>
+        <li>Message your terminal from <span class="accent2">any chat app</span></li>
+        <li>Run <span class="accent">git, shell, cron</span> commands via chat</li>
+        <li>Schedule <span class="accent2">automated tasks</span></li>
+        <li>Persistent <span class="accent">context</span> across sessions</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide-number">3 / 10</span>
+</div>
+
+<!-- Slide 4: Demo 1 - Research -->
+<div class="slide">
+  <h2>Demo 1: Research</h2>
+  <h3>Just ask — no browser, no copy-paste</h3>
+  <div class="demo-box">
+    <div class="emoji">🔍</div>
+    <h3>"Show me the latest OpenClaw releases"</h3>
+    <p>web_search → web_fetch → summarize → result</p>
+  </div>
+  <ul style="margin-top: 30px;">
+    <li>Real conversation, not pre-recorded</li>
+    <li>No browser opened, no copy-paste</li>
+    <li>Just message → result</li>
+  </ul>
+  <span class="slide-number">4 / 10</span>
+</div>
+
+<!-- Slide 5: Demo 2 - Git -->
+<div class="slide">
+  <h2>Demo 2: Git Workflow</h2>
+  <h3>Control your repos from your phone</h3>
+  <div class="demo-box">
+    <div class="emoji">📱 → 💻</div>
+    <h3>"Add a feature, commit, push"</h3>
+    <p>Write → git add → git commit → git push</p>
+  </div>
+  <ul style="margin-top: 30px;">
+    <li>Write code without opening your laptop</li>
+    <li>Perfect for on-call moments</li>
+  </ul>
+  <span class="slide-number">5 / 10</span>
+</div>
+
+<!-- Slide 6: Demo 3 - Cron -->
+<div class="slide">
+  <h2>Demo 3: Scheduled Tasks</h2>
+  <h3>Cron jobs — for your personal workflows</h3>
+  <div class="demo-box">
+    <div class="emoji">⏰</div>
+    <h3>"Remind me of this every morning"</h3>
+    <p>Schedule once, forget about it</p>
+  </div>
+  <ul style="margin-top: 30px;">
+    <li>Daily briefings, reminders, checks</li>
+    <li>Any automation you can script</li>
+    <li>Delivered to your chat, <span class="accent2">whenever you need it</span></li>
+  </ul>
+  <span class="slide-number">6 / 10</span>
+</div>
+
+<!-- Slide 7: Architecture -->
+<div class="slide">
+  <h2>How It Works</h2>
+  <div class="two-col">
+    <div>
+      <ul>
+        <li><span class="accent">Gateway</span> — single source of truth</li>
+        <li><span class="accent2">Channel plugins</span> — each chat app</li>
+        <li><span class="accent">Sessions</span> — isolated per sender</li>
+        <li><span class="accent2">Tools</span> — shell, git, browser, cron</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Data Flow</h3>
+      <pre><code>Chat App → Gateway → Agent
+              ↓
+         [Your Tools]
+         Shell / Git / Cron</code></pre>
+    </div>
+  </div>
+  <span class="slide-number">7 / 10</span>
+</div>
+
+<!-- Slide 8: Skills -->
+<div class="slide">
+  <h2>What It Can Do</h2>
+  <h3>Your agent has tools — use them naturally</h3>
+  <div class="two-col" style="margin-top: 30px;">
+    <div>
+      <ul>
+        <li>🔍 <span class="accent">Web search</span> and fetch</li>
+        <li>📁 <span class="accent2">File operations</span> — read, write, edit</li>
+        <li>🐙 <span class="accent">Git operations</span></li>
+        <li>⏰ <span class="accent2">Cron scheduling</span></li>
+        <li>🌐 <span class="accent">Browser automation</span></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>📅 <span class="accent2">Calendar</span> management</li>
+        <li>📧 <span class="accent">Email</span> (with plugins)</li>
+        <li>💬 <span class="accent2">Messaging</span> — Telegram, Discord</li>
+        <li>🖥️ <span class="accent">Shell commands</span></li>
+        <li>🧠 <span class="accent2">Memory</span> — persistent context</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide-number">8 / 10</span>
+</div>
+
+<!-- Slide 9: Get Started -->
+<div class="slide">
+  <h2>Get Started</h2>
+  <h3>Five minutes. Literally.</h3>
+  <div class="two-col" style="margin-top: 40px;">
+    <div class="card">
+      <h3>1. Install</h3>
+      <pre><code>brew install openclaw
+# or
+npm install -g openclaw</code></pre>
+    </div>
+    <div class="card">
+      <h3>2. Connect a Channel</h3>
+      <pre><code>openclaw gateway
+# Then connect Telegram/Discord/etc.</code></pre>
+    </div>
+  </div>
+  <div class="highlight-box" style="margin-top: 40px; text-align: center;">
+    <p style="font-size: 1.3em;"><strong>That's it.</strong> Your terminal now responds to messages.</p>
+  </div>
+  <span class="slide-number">9 / 10</span>
+</div>
+
+<!-- Slide 10: CTA -->
+<div class="slide cta-slide">
+  <h2>Your terminal just learned to text back.</h2>
+  <p class="subtitle" style="font-size: 1.5em; margin-bottom: 40px;">Try it tonight.</p>
+  <div class="links">
+    <a href="https://docs.openclaw.ai">Docs</a>
+    <a href="https://github.com/openclaw/openclaw">GitHub</a>
+    <a href="https://discord.gg/clawd">Discord</a>
+  </div>
+  <p style="margin-top: 60px;" class="muted">OpenClaw is free • AI models = bring your own key</p>
+  <span class="slide-number">10 / 10</span>
+</div>
+
+</body>
+</html>
