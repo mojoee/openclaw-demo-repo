@@ -2,6 +2,8 @@
 
 This is a demo repo used for the OpenClaw talk on April 22, 2026.
 
+**Hi to Prof Chou!** 🎓
+
 ## What is this?
 
 A simple repo to demonstrate OpenClaw's capabilities:
